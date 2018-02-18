@@ -1,0 +1,19 @@
+component list
+--------------
+composite_interest_show
+current_roommate_index
+current_roommate_index_item
+di_display
+group_member_index
+group_member_index_item
+group_show_page_container
+group_index
+group_index_container
+group_index_item
+invitation_index
+invitation_index_item
+nav_bar_container
+past_roommate_index
+past_roommate_index_item
+request_index
+request_index_item
