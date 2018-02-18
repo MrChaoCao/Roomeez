@@ -1,0 +1,45 @@
+State Shape
+-----------
+errors: {
+
+}
+entities: {
+  groups: {
+    1: {
+      name: "",
+
+    }
+  }
+  users: {
+    1: {
+      id,
+      image_url,
+      name,
+      admin?,
+      group_id,
+      dealbreakers,
+      interests,
+      rating,
+      past_roommates: [
+        user_id1,
+        user_id4
+      ]
+    }
+  }
+  reviews: {
+    1: {
+      reviewer_user_id: 3,
+      reviewed_user_id: 5,
+      number_of_stars: 3,
+      review: "A+"
+    },
+    2: {...}
+  }
+}
+session: {
+  currentUser: {
+  }
+}
+ui: {
+
+}

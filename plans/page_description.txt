@@ -1,0 +1,67 @@
+- Splash/Home page (CH)
+  - info
+  - login button
+  - which major cities have users
+  - how it works animation
+- Login (CH)
+- Signup (CH)
+  - new accounts always ungrouped
+
+- Dashboard(no group)
+  - all pending invitations from groups
+  - button to create group (NG)
+  - button to search for groups or users
+  - component to show dealbreakers and interest (link to edit form)
+  - past roommates (each user and whether a review has been filled out)(links to new review page)
+  - link to user's show page\profile
+
+- Dashboard (admin)
+  - requests to join group (A)
+  - all pending invitations from groups
+  - button to leave group (G)
+  - button to user search page
+  - button to search for groups or users
+  - component to show dealbreakers and interest (link to edit form)
+  - past roommates (each user and whether a review has been filled out)(links to new review page)
+  - current roommates(G)
+  - link to show page\profile
+
+- Dashboard (group)
+  - all pending invitations from groups
+  - button to leave group (G)
+  - button to search for groups or users
+  - component to show dealbreakers and interest (link to edit form)
+  - past roommates (each user and whether a review has been filled out)(links to new review page)
+  - current roommates(G)
+  - link to show page\profile
+
+- "group index page" shows index of groups that meet dealbreakers (CH)
+- "user index page" shows single users that meet dealbreakers (CH)
+  - buttons to sort listed users by:
+    - rating
+    - match %
+- group show page (CH)
+  - picture of each user (links to user show page)
+    - shows 1-5 stars composite review score
+  - msg button
+  - request to join group
+  - group composite interest match %
+- review form (CH)
+- survey form (CH)
+  - dealbreakers
+    - for each element include column for i do this and this is a dealbreaker
+  - interests
+    -
+- user search page (ProtectedRoute and must be a group admin) (CH)
+  - text box to search by user's name
+  - results show searched for user and allows sending invitation
+
+
+
+Timeline
+
+
+
+tutorials for MERN - Mongo, Express, React, Node
+udemy
+stephen gryder
