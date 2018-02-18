@@ -1,10 +1,10 @@
-- Splash/Home page
+- Splash/Home page (CH)
   - info
   - login button
   - which major cities have users
   - how it works animation
-- Login
-- Signup ()
+- Login (CH)
+- Signup (CH)
   - new accounts always ungrouped
 
 - Dashboard/User profile (no group)
@@ -35,8 +35,8 @@
   - current roommates(G)
   - link to show page\profile
 
-- group index shows index of groups that meet dealbreakers
-- person index shows single users that meet dealbreakers
+- "group index page" shows index of groups that meet dealbreakers (CH)
+- "user index page" shows single users that meet dealbreakers (CH)
   - buttons to sort listed users by:
     - rating
     - match %
@@ -47,12 +47,12 @@
   - request to join group
   - group composite interest match %
 - review form (CH)
-- survey form
+- survey form (CH)
   - dealbreakers
     - for each element include column for i do this and this is a dealbreaker
   - interests
     -
-- user search page (ProtectedRoute and must be a group admin)
+- user search page (ProtectedRoute and must be a group admin) (CH)
   - text box to search by user's name
   - results show searched for user and allows sending invitation
 
