@@ -7,7 +7,7 @@
 - Signup ()
   - new accounts always ungrouped
 
-- Dashboard/User profile (no group)
+- Dashboard(no group)
   - all pending invitations from groups
   - button to create group (NG)
   - button to search for groups or users
