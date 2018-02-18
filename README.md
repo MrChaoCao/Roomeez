@@ -1,45 +1,20 @@
-# Roomz
+# Roomeez
+Roomeez is a web application designed to help users find roommates. Roomeez matches potential roommates together based on common housing requirements and personal interests.
 
-## Members
-* Adrian Horning
-* Ashil Farahmand
-* Chao Cao
-* Wyatt Rudnicki
+## Table of Contents
+[Technologies](#technologies)
+[Features](#features)
 
-## Concept
-Web application to help users find roommates. Roomz matches housing seekers together based on common housing requirements and user interests.
+## Technologies
+The MERN stack was chosen for this project because of its idiomatic nature. Keeping the entire codebase in a single language was a principal aim of the developers.
+
+MongoDB in particular was chosen for its scalability, flexible data access, and powerful indexing functionality.
 
 ## Features
 
-* User Authentification
+* User Authentication
 * User profiles are built based on an input form
 * Users can search for other users and groups
 * Users are matched based on their housing requirements
 * Users can sort potential matches by common interests
 * Users can leave reviews on past roommates
-
-#### Bonus
-* In app chat
-
-## Tech Stack
-MERN stack
-
-## Backup idea(s)
-Django / Python based chatbot using markov chain generated text
-
-## Weekend timeline
-- [ ] Friday night: Rest
-- [ ] Saturday all day: Web Tutorials to familiarize with MERN
-- [ ] Saturday: Subdivide user auth responsibilities
-- [ ] Sunday: group tackling user auth.
-- [ ] Monday morning: Have user auth done
-
-## Tutorials
-- [ ] https://www.udemy.com/the-complete-database-modeling-and-design-beginners-tutorial/
-- [ ] https://www.udemy.com/understand-nodejs/
-- [ ] https://www.youtube.com/watch?v=pWbMrx5rVBE
-- [ ] https://www.youtube.com/watch?v=RF5_MPSNAtU
-- [ ] https://www.udemy.com/understand-nodejs/
-- [ ] https://www.youtube.com/watch?v=pWbMrx5rVBE
-- [ ] https://www.youtube.com/watch?v=RF5_MPSNAtU
-- [ ] https://www.youtube.com/watch?v=pgHcWAh9sFA
