@@ -1,0 +1,23 @@
+{
+  "name": "roomeez",
+  "version": "1.0.0",
+  "description": "Roomeez is a web application designed to help users find roommates. Roomeez matches potential roommates together based on common housing requirements and personal interests.",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrianhorning08/Roomeez.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adrianhorning08/Roomeez/issues"
+  },
+  "homepage": "https://github.com/adrianhorning08/Roomeez#readme"
+}
