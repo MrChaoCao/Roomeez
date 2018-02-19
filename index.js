@@ -1,7 +1,10 @@
 const express = require('express');
 // const session = require('express-session');
-const path = require('path')
+const path = require('path');
 const bodyParser = require('body-parser');
+const passport = require('passport');
+const FacebookStrategy = require('passport-facebook').Strategy;
+const keys = require('./config/keys');
 
 const app = express();
 //
@@ -22,9 +25,33 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //   }
 // }));
 
+// Passport, I want you to know about this strategy existing
+passport.use(new FacebookStrategy({
+  clientID: keys.facebookClientID,
+  clientSecret: keys.facebookClientSecret,
+  callbackURL: '/auth/facebook/callback'
+},
+(accessToken, refreshToken, profile, done) => {
+  console.log("Access Token: ", accessToken);
+  console.log("Refresh Token: ", refreshToken);
+  console.log("Profile: ", profile);
+}));
+
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '/frontend/react_index.html'));
 });
+
+app.get('/auth/facebook',
+  passport.authenticate('facebook', {
+    scope: ['public_profile', 'email']
+  }));
+
+app.get('/auth/facebook/callback',
+  passport.authenticate('facebook', { failureRedirect: '/login' }),
+  function(req, res) {
+    // Successful authentication, redirect home.
+    res.redirect('/');
+  });
 
 
 // Run local server on port 3000.
