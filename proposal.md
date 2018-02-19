@@ -38,7 +38,7 @@ The MERN stack was chosen for this project because
 *
 
 ## Implementation Timeline
-### Phase 0: Planning (1 day)
+### Phase 0: Planning (1 days)
 * Determine project scope
 * Determine MVPs
 * Build component hierarchy
@@ -46,10 +46,42 @@ The MERN stack was chosen for this project because
 * Determine state shape
 * Draw wireframes
 
-### Phase 1: Learn Technologies (2 days)
+#### Objectives:
+After the end of Phase 1 the core functionality of the app and all the major features will be discussed and reviewed by the whole team. All planning documents will be completed an the overall workflow and project architecture will be set by the team.
+
+### Phase 1: Learn Technologies (1 days)
 * Development team will spend the weekend familiarizing themselves with the MERN stack
 
-### Phase 2: Skeleton (2 days)
-* User Authentication
-* Root Page
-* Dashboard
+#### Objectives:
+By the end of Phase 1 the dev team will have researched their respective responsibilities and will learn enough about the MERN stack to begin working on their personal assignments.
+
+### Phase 2: Skeleton (3 days)
+* User Authentication (Whole team)
+* Splash Page (Adrian)
+* Dashboard (Chao, Ashil)
+* User Show Page (Wyatt)
+
+#### Objectives:
+By the end of Phase 2 the skeleton will be completed and the the general site architecture will have been established. User authentication will be completed and the site will be functional to users, though nearly featureless.
+
+### Phase 3: MVP Features (3.5 Days)
+* Group Show Page (Wyatt)
+* Survey/Roommate Review Form (Wyatt, Adrian)
+* Search (Ashil)
+* Create Group (Chao)
+* User and Group Indices (Chao, Ashil)
+
+#### Objectives:
+The goal of Phase 3 is for the team to finish all the core functionality of the site. Users will be able to use the site to find roommates based on compatibility and form groups with eachother.
+
+### Phase 4: Polishing (0.5 Days)
+* Seeding (Whole team)
+* Polishing Styling (Whole team)
+
+#### Objectives:
+By the end of phase 4 the site will be production ready. All elements will be styled in a consistent and aesthetically pleasing manner. The database will be seeded with enough information to provide a realistic user experience to new and prospective users for the site.
+
+## Plan to acquire users and market share
+* Members of the dev team will share the site with friends and family to build an initial userbase.
+* The site will be posted on subreddits devoted to big cities (such as /r/sanfrancisco) to generate click through.
+* Ads will be purchased on facebook and google to increase clickthrough and conversion rate of new users
