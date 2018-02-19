@@ -10,14 +10,6 @@ entities: {
 
     }
   }
-  messages: {
-    1: {
-      sender_user_id: 3,
-      receiver_user_id: 1,
-      group_id: 2
-    },
-    2: ...
-  }
   users: {
     1: {
       id,
