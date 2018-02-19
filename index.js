@@ -2,9 +2,28 @@ const express = require('express');
 // const session = require('express-session');
 const path = require('path');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const cookieSession = require('cookie-session');
+const passport = require('passport');
+const keys = require('./config/keys');
+
+require('./models/User');
 require('./services/passport');
 
+mongoose.connect(keys.mongoURI);
+
 const app = express();
+
+app.use(
+  cookieSession({
+    maxAge: 30 * 24 * 60 * 60 * 1000,
+    keys: [keys.cookieKey]
+  })
+);
+
+// tells passport to make use of cookies to handle auth
+app.use(passport.initialize());
+app.use(passport.session());
 
 // we export a function, with which we pass in app
 require('./routes/authRoutes')(app);
@@ -27,7 +46,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // }));
 
 // Passport, I want you to know about this strategy existing
-
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '/frontend/react_index.html'));
 });
