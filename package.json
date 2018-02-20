@@ -11,11 +11,18 @@
     "body-parser": "^1.18.2",
     "cookie-session": "^2.0.0-beta.3",
     "express": "^4.16.2",
+    "logger": "0.0.1",
     "mongodb": "^3.0.2",
     "mongoose": "^5.0.6",
     "nodemon": "^1.15.0",
     "passport": "^0.4.0",
-    "passport-facebook": "^2.1.1"
+    "passport-facebook": "^2.1.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "thunk": "0.0.1"
   },
   "devDependencies": {},
   "scripts": {

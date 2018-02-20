@@ -48,10 +48,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Passport, I want you to know about this strategy existing
 app.get('/', (req, res) => {
-  numOfProcessedRequests++;
-  console.log(`Server has processed ${numOfProcessedRequests} requests!`);
-  res.send(`Server has processed ${numOfProcessedRequests} requests!`);
-  // res.sendFile(path.join(__dirname, '/frontend/react_index.html'));
+  // numOfProcessedRequests++;
+  // console.log(`Server has processed ${numOfProcessedRequests} requests!`);
+  // res.send(`Server has processed ${numOfProcessedRequests} requests!`);
+  res.sendFile(path.join(__dirname, '/frontend/react_index.html'));
 });
 
 // Run local server on port 3000.
