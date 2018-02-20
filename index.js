@@ -13,6 +13,7 @@ require('./services/passport');
 mongoose.connect(keys.mongoURI);
 
 const app = express();
+let numOfProcessedRequests = 0;
 
 app.use(
   cookieSession({
@@ -47,13 +48,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Passport, I want you to know about this strategy existing
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '/frontend/react_index.html'));
+  numOfProcessedRequests++;
+  console.log(`Server has processed ${numOfProcessedRequests} requests!`);
+  res.send(`Server has processed ${numOfProcessedRequests} requests!`);
+  // res.sendFile(path.join(__dirname, '/frontend/react_index.html'));
 });
 
-
-
 // Run local server on port 3000.
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 const server = app.listen(port, function () {
   console.log('Server running at http://127.0.0.1:' + port + '/');
 });
