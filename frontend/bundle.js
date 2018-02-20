@@ -3402,6 +3402,8 @@ var _store2 = _interopRequireDefault(_store);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 document.addEventListener('DOMContentLoaded', function () {
+  console.log('working');
+  // this doesn't get hit
   var store = void 0;
   // if (window.currentUser) {
   //   const preloadedState = { session: { currentUser: window.currentUser } };

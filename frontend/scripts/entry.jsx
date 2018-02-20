@@ -6,6 +6,8 @@ import configureStore from './store/store';
 
 
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('working');
+  // this doesn't get hit
   let store;
   // if (window.currentUser) {
   //   const preloadedState = { session: { currentUser: window.currentUser } };
