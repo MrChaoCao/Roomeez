@@ -9,9 +9,9 @@ import {
 
 const App = () => (
     <div>
-        <header>
-          Welcome to the Node-React skeleton.
-        </header>
+      <header>
+        Working!!!
+      </header>
     </div>
 );
 
