@@ -1,9 +1,13 @@
 const express = require('express');
 // const session = require('express-session');
-const path = require('path')
+const path = require('path');
 const bodyParser = require('body-parser');
+require('./services/passport');
 
 const app = express();
+
+// we export a function, with which we pass in app
+require('./routes/authRoutes')(app);
 //
 // app.set('view engine', 'ejs');
 // app.set('views', __dirname + '/views');
@@ -22,9 +26,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //   }
 // }));
 
+// Passport, I want you to know about this strategy existing
+
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '/frontend/react_index.html'));
 });
+
 
 
 // Run local server on port 3000.
