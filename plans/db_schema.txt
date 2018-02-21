@@ -39,6 +39,8 @@
 | id                | integer       | not null, primary key      |
 | requester_user_id | integer       | not null, foreign key      |
 | requested_user_id | integer       | not null, foreign key      |
+| group_id          | integer       | not null, foreign key      |
+
 
 # Reviews
 
