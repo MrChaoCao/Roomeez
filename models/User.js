@@ -2,8 +2,17 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const userSchema = new Schema({
+  about: String,
+  admin: Boolean,
+  dealbreakers: Object,
+  email: String,
   facebookId: String,
-  name: String
+  group_id: Number,
+  image_url: String,
+  interests: Object,
+  name: String,
+  past_roommates: Array,
+  thingsIDo: Object
 });
 
-mongoose.model('users', userSchema);
+module.exports = mongoose.model('User', userSchema);
