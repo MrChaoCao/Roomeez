@@ -16,12 +16,6 @@
 | interests       | object          | not null, indexed          |
 | past_roommates  | array(integers) |                            |
 
-
-| password_digest | string        | not null                   |
-| session_token   | string        | not null, unique, indexed  |
-| created_at      | datetime      | not null                   |
-| updated_at      | datetime      | not null                   |
-
 # Groups
 
 | col-name        | data type       |      details               |
