@@ -5,7 +5,7 @@ module.exports = {
   entry: "./frontend/scripts/entry.jsx",
     output: {
         path: __dirname,
-        filename: "./frontend/bundle.js"
+        filename: "./frontend/assets/javascripts/bundle.js"
     },
     resolve: {
       extensions: ['.js', '.jsx', '*']
