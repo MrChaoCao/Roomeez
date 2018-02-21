@@ -1,0 +1,35 @@
+# FE
+  - /
+    - if not loggedin, show splash page
+    - else reroute to user profile
+  - /login
+  - /signup
+  - /users/:id
+    - if currentUser.id === :id, then show dashboard w/full detail
+    - otherwise, show less detailed show page
+  - /users/:id/reviews
+  - /users/:id/reviews/new
+  - /groups/:id
+  - /users
+    - ProtectedRoute, shows users matched by dealbreakers
+  - /groups
+    - ProtectedRoute, shows groups matched by dealbreakers
+  - /groups/new
+  - /users/search
+
+# BE API
+  - searchusers
+    - GET api/searchusers - searches for a specific user by name
+  - users
+    - GET api/users/:id - user show page info
+    - INDEX api/users - shows users filtered by dealbreakers
+    - POST api/users - sign up
+  - groups
+    - GET api/groups/:id - show group
+    - INDEX api/groups - shows groups filtered by dealbreakers
+    - POST api/groups - create new group
+    - PATCH api/groups/:id - update group
+    - DELETE api/groups/:id - delete a group
+  - reviews
+    - POST api/users/:id/reviews - create new review for a user
+    - INDEX api/users/:id/reviews - show user's reviews
