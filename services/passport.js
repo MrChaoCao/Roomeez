@@ -25,7 +25,6 @@ passport.use(new FacebookStrategy({
     proxy: true
   },
   (accessToken, refreshToken, profile, done) => {
-    console.log(profile);
     User.findOne({ facebookId: profile.id }) // promise returned here
       .then((existingUser) => {
         if (existingUser) {
