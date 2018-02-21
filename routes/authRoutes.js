@@ -20,7 +20,6 @@ module.exports = (app) => {
     res.send(req.user);
   });
 
-  // just a test route for auth
   app.get('/api/current_user', (req, res) => {
     res.send(req.user);
   });
