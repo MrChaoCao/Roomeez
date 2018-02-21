@@ -13,6 +13,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "jquery": "^3.3.1",
+    "proxy": "^0.2.4",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
