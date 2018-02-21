@@ -1,0 +1,47 @@
+# Users (this table\collection is incomplete, I don't know what other info we need to save for users)
+
+# Users
+
+| col-name        | data type       |      details               |
+| --------------- | --------------- | -------------------------- |
+| id              | integer         | not null, primary key      |
+| name            | string          | not null                   |
+| email           | string          | not null, unique, indexed  |
+| image_url       | string          |                            |
+| about           | string          |                            |
+| admin           | boolean         | not null                   |
+| group_id        | integer         | indexed, foreign key       |
+| thingsIDo       | object          | not null, indexed          |
+| dealbreakers    | object          | not null, indexed          |
+| interests       | object          | not null, indexed          |
+| past_roommates  | array(integers) |                            |
+
+# Groups
+
+| col-name        | data type       |      details               |
+| --------------- | --------------- | -------------------------- |
+| id              | integer         | not null, primary key      |
+| name            | string          | not null, unique           |
+| image_url       | string          | not null                   |
+| admin_user_id   | integer         | not null, foreign key      |
+| members         | array(user_ids) | not null, foreign keys     |
+
+# Requests
+
+| col-name          | data type     |      details               |
+| ----------------- | ------------- | -------------------------- |
+| id                | integer       | not null, primary key      |
+| requester_user_id | integer       | not null, foreign key      |
+| requested_user_id | integer       | not null, foreign key      |
+| group_id          | integer       | not null, foreign key      |
+
+
+# Reviews
+
+| col-name         | data type     |      details               |
+| ---------------- | ------------- | -------------------------- |
+| id               | integer       | not null, primary key      |
+| reviewer_user_id | integer       | not null, foreign key      |
+| reviewed_user_id | integer       | not null, foreign key      |
+| number_of_stars  | integer       | not null, between 1-5      |
+| body             | string        |                            |
