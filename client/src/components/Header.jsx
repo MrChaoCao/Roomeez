@@ -5,8 +5,8 @@ class Header extends React.Component {
   render(){
     return (
       <div>
-        <a href="//localhost:5000/auth/facebook">Login</a>
-        <a href="//localhost:5000/api/logout">Logout</a>
+        <a href="/auth/facebook">Login</a>
+        <a href="/api/logout">Logout</a>
       </div>
     );
   }
