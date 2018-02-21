@@ -18,6 +18,7 @@
     "logger": "0.0.1",
     "mongodb": "^3.0.2",
     "mongoose": "^5.0.6",
+    "node-sass": "^4.7.2",
     "nodemon": "^1.15.0",
     "passport": "^0.4.0",
     "passport-facebook": "^2.1.1",
@@ -29,12 +30,13 @@
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
+    "sass-loader": "^6.0.6",
     "thunk": "0.0.1",
     "webpack": "^3.11.0"
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node index.js",
+    "start": "sass --watch ./frontend/assets/scss/entry.scss:./frontend/assets/css/bundle.css",
     "dev": "nodemon index.js"
   },
   "repository": {
