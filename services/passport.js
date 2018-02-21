@@ -3,7 +3,7 @@ const FacebookStrategy = require('passport-facebook').Strategy;
 const mongoose = require('mongoose');
 const keys = require('../config/keys');
 
-const User = mongoose.model('users');
+const User = require('../models/User');
 
 // generates our "identifying token" w/ done function;
 passport.serializeUser((user, done) => {
