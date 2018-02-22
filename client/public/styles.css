@@ -51,14 +51,13 @@ h1 {
 }
 
 .masthead-image {
-  background-image: url('friends.jpg');
-  filter: blur(2px);
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('friends.jpg');
   height: 700px;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-  opacity: .7;
+  opacity: 3;
 }
 
 .masthead-box {
@@ -71,11 +70,27 @@ h1 {
   position: fixed;
 }
 
-
 .masthead-box h1 {
   margin-top: 100px;
   color: black;
   font-weight: 600;
   font-size: 80px;
   letter-spacing: 2px;
+  color: white;
+}
+
+.masthead a {
+  position: fixed;
+  border: 1px solid white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+  color: white;
+  margin-top: -100px;
+}
+
+.masthead a:hover {
+  background: white;
+  color: #ff3b3f;
+  transition: background 0.5s ease;
 }

@@ -28,7 +28,7 @@ class Header extends React.Component {
   render(){
     return (
       <div className="header">
-        <div className="hero-title">
+        <div className="header-title">
           <a href="/"><h1>Roommez</h1></a>
         </div>
           {this.renderContent()}
