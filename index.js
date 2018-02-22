@@ -1,6 +1,5 @@
 const express = require('express');
 // const session = require('express-session');
-const path = require('path');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
@@ -32,6 +31,16 @@ require('./routes/authRoutes')(app);
 // app.set('view engine', 'ejs');
 // app.set('views', __dirname + '/views');
 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
+
+  const path = require('path');
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  });
+}
+
+
 // Use the session middleware
 app.use(express.static('frontend'));
 app.use(bodyParser.json());
@@ -46,13 +55,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //   }
 // }));
 
-// Passport, I want you to know about this strategy existing
-app.get('/', (req, res) => {
-  numOfProcessedRequests++;
-  console.log(`Server has processed ${numOfProcessedRequests} requests!`);
-  res.send(`Server has processed ${numOfProcessedRequests} requests!`);
-  // res.sendFile(path.join(__dirname, '/frontend/react_index.html'));
-});
+// ADRIAN COMMENT
+// I don't know if we want this here. This might be what heroku is reading
+// app.get('/', (req, res) => {
+//   numOfProcessedRequests++;
+//   console.log(`Server has processed ${numOfProcessedRequests} requests!`);
+//   res.send(`Server has processed ${numOfProcessedRequests} requests!`);
+//   // res.sendFile(path.join(__dirname, '/frontend/react_index.html'));
+// });
 
 // Run local server on port 5000.
 const port = process.env.PORT || 5000;
