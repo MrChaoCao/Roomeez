@@ -1,6 +1,45 @@
+/*
+  colors:
+  blue - #caebf2
+  dark gray - #a9a9a9
+  red - #ff3b3f
+  light gray - #efefef
+  #545454
+ */
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #efefef;
+  color: #545454;
+}
+
+h1 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 32px;
+}
+
 .header {
   width: 100%;
-  height: 60px;
-  background: red;
+  height: 70px;
+  background: #ff383f;
+  color: white;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px 0 10px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.header-links {
+  border: 1px solid white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.header-links:hover {
+  background: white;
+  color: #ff3b3f;
+  transition: background 0.5s ease;
 }

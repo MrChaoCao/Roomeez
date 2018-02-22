@@ -7,11 +7,19 @@ class Header extends React.Component {
         return;
       case false:
         return (
-          <a href="/auth/facebook">Login</a>
+          <a href="/auth/facebook">
+            <div className="header-links">
+              Login with Facebook
+            </div>
+          </a>
         );
       default:
         return (
-          <a href="/api/logout">Logout</a>
+          <a href="/api/logout">
+            <div className="header-links">
+              Logout
+            </div>
+          </a>
         );
 
     }
@@ -21,11 +29,9 @@ class Header extends React.Component {
     return (
       <div className="header">
         <div className="hero-title">
-          Roommez
+          <a href="/"><h1>Roommez</h1></a>
         </div>
-        <div className="header-links">
           {this.renderContent()}
-        </div>
       </div>
     );
   }
