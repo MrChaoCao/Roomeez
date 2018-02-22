@@ -1,7 +1,6 @@
 import { RECEIVE_CURRENT_USER } from '../actions/user_actions';
 
 export default function(state = null, action) {
-  console.log(action);
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
       // if the user is logged out, payload will be "",
