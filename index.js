@@ -1,4 +1,5 @@
 const express = require('express');
+const app = express();
 // const session = require('express-session');
 const path = require('path');
 const bodyParser = require('body-parser');
@@ -7,12 +8,11 @@ const cookieSession = require('cookie-session');
 const passport = require('passport');
 const keys = require('./config/keys');
 
-const User = require('./models/User');
+require('./models/User');
 require('./services/passport');
 
 mongoose.connect(keys.mongoURI);
 
-const app = express();
 let numOfProcessedRequests = 0;
 
 app.use(
@@ -36,6 +36,13 @@ require('./routes/authRoutes')(app);
 app.use(express.static('frontend'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// const userRoutes = require("./routes/users");
+// const groupRoutes = require("./routes/groups");
+// app.use('/api/users', userRoutes);
+// app.use('/api/groups', groupRoutes);
+
+
 // use below to store the session in some server separate from the cookie
 // app.use(session({
 //   secret: 'YOURSECRET',
