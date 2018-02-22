@@ -2,7 +2,6 @@ import React from 'react';
 
 class Header extends React.Component {
   renderContent(){
-
     switch (this.props.currentUser) {
       case null:
         return;
@@ -20,8 +19,13 @@ class Header extends React.Component {
 
   render(){
     return (
-      <div>
-        {this.renderContent()}
+      <div className="header">
+        <div className="hero-title">
+          Roommez
+        </div>
+        <div className="header-links">
+          {this.renderContent()}
+        </div>
       </div>
     );
   }
