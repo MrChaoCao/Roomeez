@@ -2,7 +2,7 @@
 Roomeez is a web application designed to help users find roommates.
 
 ## Background and Overview
-Finding roommates is an informal and daunting process. Finding new roommates is hard and it is hard to know what a stranger is like before living with them.
+Finding roommates is an informal and daunting process, most people don't even know where to start. The fundamental problem is, it is impossible to know how someone is as a roommate before you've actually lived with them.
 
 Roomeez attempts to solve that problem by:
 1. Allowing users to search for roommates based on housing needs and compatibility.
@@ -10,16 +10,17 @@ Roomeez attempts to solve that problem by:
 
 ## Functionality & MVP
 This app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation:
-- [ ] New user sign up, sign in, and authentication
-- [ ] Splash page explaining the site concept
-- [ ] Dashboard page displays interface options to user
-- [ ] Users must fill out needs and interests survey
-- [ ] Users can view and create profiles
+- [x] New user sign up, sign in, and authentication
+- [x] Splash page explaining the site concept
+- [x] Dashboard page clearly displays interface options to user
+- [ ] Users fill out a survey to establish their needs and interests
+- [ ] Users can view profiles of other users
 - [ ] Users can view and create groups
 - [ ] Users can search for individuals and groups
-- [ ] Users can rate past roommates
+
 
 #### Bonus Features
+- [ ] Users can rate past roommates
 - [ ] In app chat between users
 - [ ] Users/Groups can be filtered by rating
 - [ ] Users/Groups can be filtered by match percentage
@@ -29,13 +30,10 @@ The MERN stack was chosen for this project because
 * Its idiomatic nature. Keeping the entire codebase in a single language was a principal aim of the developers.
 * React architecture allows for quick prototyping and isomorphic nature
 * MongoDB has excellent scalability, flexible data access, and powerful indexing functionality
-*
-
 
 #### Technical Challenges
 * Learning and designing a back-end with a NoSQL database
-* Managing the complex
-*
+* Managing the complex collections required for user-user and user-group interaction 
 
 ## Implementation Timeline
 ### Phase 0: Planning (1 days)
@@ -66,7 +64,6 @@ By the end of Phase 2 the skeleton will be completed and the the general site ar
 
 ### Phase 3: MVP Features (3.5 Days)
 * Group Show Page (Wyatt)
-* Survey/Roommate Review Form (Wyatt, Adrian)
 * Search (Ashil)
 * Create Group (Chao)
 * User and Group Indices (Chao, Ashil)
