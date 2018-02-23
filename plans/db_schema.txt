@@ -8,7 +8,7 @@
 | name            | string          | not null                   |
 | email           | string          | not null, unique, indexed  |
 | image_url       | string          |                            |
-| about           | string          |                            |
+| about           | text            |                            |
 | admin           | boolean         | not null                   |
 | group_id        | integer         | indexed, foreign key       |
 | thingsIDo       | object          | not null, indexed          |

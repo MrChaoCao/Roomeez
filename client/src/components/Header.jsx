@@ -1,12 +1,37 @@
 import React from 'react';
 
 class Header extends React.Component {
-  // The links need to be <a> tags. NOT <Link>
+  renderContent(){
+    switch (this.props.currentUser) {
+      case null:
+        return;
+      case false:
+        return (
+          <a href="/auth/facebook">
+            <div className="header-links">
+              Login with Facebook
+            </div>
+          </a>
+        );
+      default:
+        return (
+          <a href="/api/logout">
+            <div className="header-links">
+              Logout
+            </div>
+          </a>
+        );
+
+    }
+  }
+
   render(){
     return (
-      <div>
-        <a href="/auth/facebook">Login</a>
-        <a href="/api/logout">Logout</a>
+      <div className="header">
+        <div className="header-title">
+          <a href="/"><h1>Roommez</h1></a>
+        </div>
+          {this.renderContent()}
       </div>
     );
   }

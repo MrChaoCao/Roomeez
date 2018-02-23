@@ -33,7 +33,7 @@
     - POST api/groups - create new group
     - PATCH api/groups/:id - update group
     - DELETE api/groups/:id - delete a group
-
+    
   - reviews
-    - POST api/users/:id/reviews - create new review for a user
-    - INDEX api/users/:id/reviews - show user's reviews
+    - POST /api/users/:id/reviews - create new review for a user
+    - INDEX /api/users/:id/reviews - show user's reviews
