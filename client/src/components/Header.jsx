@@ -15,12 +15,16 @@ class Header extends React.Component {
         );
       default:
         return (
-          <a href="/api/logout">
-            <div className="header-links">
-              Logout
-            </div>
-            <img>{currentUser.image_url}</img>
-          </a>
+          <div className="user-nav-icons">
+            <a href="/api/logout">
+              <div className="header-links">
+                Logout
+              </div>
+            </a>
+            <img
+              className="profile-image" src={this.props.currentUser.image_url}/>
+          </div>
+
         );
 
     }

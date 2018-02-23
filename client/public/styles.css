@@ -31,11 +31,23 @@ h1 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.user-nav-icons{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 .header-links {
   border: 1px solid white;
   cursor: pointer;
   padding: 10px;
   border-radius: 4px;
+}
+
+.profile-image{
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  border-radius: 18px;
 }
 
 .header-links:hover {
