@@ -9,6 +9,7 @@ const GroupsController = require('../controllers/GroupsController');
 
 router.get('/:groupId', function(req, res) {
   console.log(req.params);
+  console.log(req.user);
   Group.findById(req.params.groupId, (err, group) => {
     if (err) {
       return res.status(404).send("Not found");
@@ -21,7 +22,8 @@ router.get('/:groupId', function(req, res) {
 
 // need to get all based on match
 router.get('', function(req, res) {
-  Group.find({}, (err, groups) => {
+  console.log("req.user !!!!", req.user);
+  Group.find({}).then((err, groups) => {
     if (err) {
       return res.send({ message: err });
     } else {
@@ -34,6 +36,7 @@ router.get('', function(req, res) {
 router.post('', function(req, res) {
   let newGroup = new Group(req.body);
   // newGroup.admin_user_id = current_user.id // need a current user helper here
+  newGroup.admin_user_id = req.user.id;
   newGroup.save((err, user)=> {
     if (err) {
       return res.status(400).send({
