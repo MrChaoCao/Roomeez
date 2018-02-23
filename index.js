@@ -1,5 +1,4 @@
 const express = require('express');
-const app = express();
 // const session = require('express-session');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
@@ -7,11 +6,12 @@ const cookieSession = require('cookie-session');
 const passport = require('passport');
 const keys = require('./config/keys');
 
-require('./models/User');
+const User = require('./models/User');
 require('./services/passport');
 
 mongoose.connect(keys.mongoURI);
 
+const app = express();
 let numOfProcessedRequests = 0;
 
 app.use(
@@ -41,21 +41,10 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 
-// app.use('view engine', 'pug')
-// view engine
-// app.use(express.static(__dirname + '/views'));
+// Use the session middleware
+app.use(express.static('frontend'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
-const userRoutes = require("./routes/users");
-const searchusersRoutes = require("./routes/searchusers");
-// const groupRoutes = require("./routes/groups");
-app.use('/api/users', userRoutes);
-app.use('/api/searchusers', searchusersRoutes);
-
-// app.use('/api/groups', groupRoutes);
-
-
 // use below to store the session in some server separate from the cookie
 // app.use(session({
 //   secret: 'YOURSECRET',
