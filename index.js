@@ -41,8 +41,9 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 
-// Use the session middleware
-app.use(express.static('frontend'));
+// app.use('view engine', 'pug')
+// view engine
+// app.use(express.static(__dirname + '/views'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 // use below to store the session in some server separate from the cookie
