@@ -22,9 +22,10 @@
     - GET api/searchusers/:userName - searches for a specific user by name
 
   - users
-    - GET api/users/:id - user show page info
+    - GET api/users/:userId - user show page info
     - INDEX api/users - shows users filtered by dealbreakers
-    - POST api/users - sign up
+    - POST api/users - sign up // ------- THIS ROUTE IS NO MORE --------
+    - PATCH api/users/:userId - update user
 
   - groups
     - GET api/groups/:id - show group

@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const ObjectId = require('mongodb').ObjectID;
+// const ObjectId = require('mongodb').ObjectID;
 
 const User = mongoose.model('User');
 
@@ -10,66 +10,36 @@ const User = mongoose.model('User');
 
 // const UsersController = require('../controllers/users');
 
-
-console.log("2: user routes");
-
+// This works
 router.get('/:userId', function(req, res) {
-  // res.send("WIP");
-  // res.json({userId: req.params.userId});
-
-  // User.findOne({_id: "Gary"}).then(user1 => {
-  //   console.log("----------------------");
-  //   console.log(user1);
-  //   console.log("Reading...");
-  //   res.send(user1.name);
-  // });
-  // "_id": {
-  //       "$oid": "5a8da9f7891c97d407b759f8"
-  //   },
-  //   "facebookId": "1882678195375668",
-  //   "name": "M Adrian Horning",
-  // let query = {
-  //   _id: req.params.userId
-  // };
-
-  console.log(req.params.userId);
-
-  // let query = {
-  //   _id: ObjectId(req.params.userId)
-  // };
-  //
-  // console.log(query);
-
-  User.create({ facebookId: "123", name: "junk" });
-
-  // User.findOne({name: "M Adrian Horning"}, function(err, user) {
-  //   console.log(user);
-  //   console.log(err);
-  //   // res.json(user);
-  // });
-
-  // User.findById(req.params.userId).exec(function(err, user) {
-  //   console.log(user);
-  //   console.log(err);
-  //   // res.json(user);
-  // });
+  User.findById(req.params.userId).then(
+    (user, err) => {
+      if (user) {
+        res.json(user);
+      } else {
+        res.status(404).send("Not found");
+      }
+    }
+  );
 });
 
 router.get('', function(req, res) {
-  res.send("We haven't finished this part yet.");
+  // This route returns all other users that match a group's survey results.
+  // This is the user output from the hard filter.
+  console.log("Can't work on this yet.");
+  res.send("Each user needs to have a filled out survey before we can finish this.");
 });
 
-router.post('', function(req, res) {
-  console.log("<<<PARAMS>>>");
-  console.log(req.body);
-  console.log(req.params);
-  // res.json(req);
-  // res.send("We haven't finished this part yet.");
-  User.findOne({name: "Gary"}).then(user1 => {
-    // console.log("----------------------");
-    // console.log(user1);
-    // console.log("Reading...");
-  });
+router.patch('/:userId', function(req, res) {
+  User.findByIdAndUpdate(req.params.userId, {$set: req.body}).then(
+    (user, err) => {
+      if (user) {
+        res.json(user);
+      } else {
+        res.status(404).send("Not found");
+      }
+    }
+  );
 });
 
 // router.get("/api/users", function(){console.log("MW");}, UsersController.get_all_based_on_match);
