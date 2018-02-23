@@ -19,6 +19,7 @@ class Header extends React.Component {
             <div className="header-links">
               Logout
             </div>
+            <img>{currentUser.image_url}</img>
           </a>
         );
 
