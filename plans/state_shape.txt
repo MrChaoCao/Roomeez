@@ -36,9 +36,8 @@ entities: {
     2: {...}
   }
 }
-session: {
-  currentUser: {
-  }
+currentUser: {
+
 }
 ui: {
 
