@@ -22,6 +22,25 @@ const Landing = () => {
           <p>Search for Groups That Need Roommates</p>
         </div>
       </section>
+      <section className="no-more-roommates">
+        <h1>No More Crappy Rommmates!</h1>
+        <h3>Rate Past Roommates</h3>
+        <p><em>&quot;He was ok, but kept roundhouse kicking me in the face...&quot;</em></p>
+        <div className="stars-landing">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <h3>Check Out Other People's Rating</h3>
+        <img src="chucky.jpg"></img>
+        <div className="person-rating">
+          <p>Chuck</p>
+          <i class="fas fa-star"></i>
+          4.7
+        </div>
+      </section>
   </div>
   );
 };
