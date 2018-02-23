@@ -2,7 +2,7 @@
 Roomeez is a web application designed to help users find roommates.
 
 ## Background and Overview
-Finding roommates is an informal and daunting process. Finding new roommates is hard and it is hard to know what a stranger is like before living with them.
+Finding roommates is an informal and daunting process, most people don't even know where to start. The fundamental problem is, it is impossible to know how someone is as a roommate before you've actually lived with them.
 
 Roomeez attempts to solve that problem by:
 1. Allowing users to search for roommates based on housing needs and compatibility.
