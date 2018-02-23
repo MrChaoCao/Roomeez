@@ -121,11 +121,17 @@ h1 {
   border-right: 1px solid #a9a9a9;
 }
 
-.search-for-individuals-box .search-for-groups-box {
+.search-for-individuals-box p {
+  margin-top: 30px;
+  font-size: 24px;
+}
+
+.search-for-groups-box p {
+  font-size: 24px;
 }
 
 .fa-user-circle {
-  font-size: 300px;
+  font-size: 275px;
 }
 
 .search-for-groups-box {
