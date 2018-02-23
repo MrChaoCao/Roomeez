@@ -25,6 +25,10 @@ class Header extends React.Component {
             <img
               className="profile-image" src={this.props.currentUser.image_url}/>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3ea700c476b8f18d48f97aac9ac50e29a688b548
         );
 
     }
