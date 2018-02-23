@@ -104,7 +104,6 @@ h1 {
 
 #how-it-works h1 {
   font-size: 70px;
-  color: #ff3b3f;
   position: absolute;
   margin-top: 50px;
 }
@@ -180,4 +179,34 @@ h1 {
 .stars-landing {
   font-size: 50px;
   margin-bottom: 20px;
+}
+
+.similar-interests-landing {
+  width: 100%;
+  display: flex;
+  height: 600px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.similar-interests-landing h1{
+  margin-top: 20px;
+  font-size: 70px;
+}
+
+.fa-wpforms {
+  font-size: 125px;
+}
+
+.similar-interests-landing img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.person-match {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24px;
 }

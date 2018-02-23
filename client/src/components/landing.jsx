@@ -25,7 +25,7 @@ const Landing = () => {
       <section className="no-more-roommates">
         <h1>No More Crappy Rommmates!</h1>
         <h3>Rate Past Roommates</h3>
-        <p><em>&quot;He was ok, but kept roundhouse kicking me in the face...&quot;</em></p>
+        <p><em>&quot;He was ok, but he kept roundhouse kicking me in the face...&quot;</em></p>
         <div className="stars-landing">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -39,6 +39,17 @@ const Landing = () => {
           <p>Chuck</p>
           <i class="fas fa-star"></i>
           4.7
+        </div>
+      </section>
+      <section className="similar-interests-landing">
+        <h1>Find People With Similar Interests</h1>
+        <h3>Fill out survey with your interests</h3>
+        <i class="fab fa-wpforms"></i>
+        <h3>We match you according to your interests</h3>
+        <img src="biebs.jpg"></img>
+        <div className="person-match">
+          <p>Biebs</p>
+          <p style={{color: "green"}}>97% Match!</p>
         </div>
       </section>
   </div>
