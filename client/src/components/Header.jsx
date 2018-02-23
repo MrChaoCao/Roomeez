@@ -21,6 +21,7 @@ class Header extends React.Component {
                 Logout
               </div>
             </a>
+            <p className="nametag">| {this.props.currentUser.name}</p>
             <img
               className="profile-image" src={this.props.currentUser.image_url}/>
           </div>

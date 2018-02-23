@@ -34,6 +34,7 @@ h1 {
 .user-nav-icons{
   display: flex;
   flex-direction: row-reverse;
+  align-items: center;
 }
 
 .header-links {
@@ -43,10 +44,13 @@ h1 {
   border-radius: 4px;
 }
 
+.nametag{
+  margin: 0px 23px 0 5px;
+}
+
 .profile-image{
   width: 40px;
   height: 40px;
-  margin-right: 20px;
   border-radius: 18px;
 }
 
