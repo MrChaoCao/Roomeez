@@ -1,9 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Landing from './landing';
+import UserSurveyContainer from './user_survey_container';
 
 import HeaderContainer from './Header_container';
-const Dashboard = () => <h2>Dashboard</h2>;
+import DashboardContainer from './dashboard/dashboard_container';
 
 class App extends React.Component {
   componentDidMount() {
@@ -17,7 +18,8 @@ class App extends React.Component {
             <div>
               <HeaderContainer/>
               <Route exact path="/" component={Landing}/>
-              <Route path="/dashboard" component={Dashboard}/>
+              <Route path="/survey" component={UserSurveyContainer}/>
+              <Route path="/dashboard" component={DashboardContainer}/>
             </div>
           </BrowserRouter>
         </div>

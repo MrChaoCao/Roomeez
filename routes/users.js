@@ -110,7 +110,10 @@ router.patch('/:userId', function(req, res) {
   User.findByIdAndUpdate(req.params.userId, {$set: req.body}).then(
     (user, err) => {
       if (user) {
-        res.json(user);
+        // you send back the body of the request:
+        res.send(req.body);
+        // this is sending the actual old user:
+        // res.json(user);
       } else {
         res.status(404).send("Not found");
       }

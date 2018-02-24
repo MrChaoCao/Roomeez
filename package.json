@@ -19,7 +19,8 @@
     "objectid": "^3.2.1",
     "passport": "^0.4.0",
     "passport-facebook": "^2.1.1",
-    "proxy": "^0.2.4"
+    "proxy": "^0.2.4",
+    "react-modal": "^3.3.1"
   },
   "devDependencies": {},
   "scripts": {
