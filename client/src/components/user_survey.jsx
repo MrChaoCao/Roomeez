@@ -65,6 +65,7 @@ class UserSurvey extends React.Component {
         }
       };
       this.setState(newObj, () => console.log(this.state));
+      // when you make the ajax call, remember to deconstruct the state
   }
 
   render() {
