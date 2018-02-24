@@ -23,7 +23,7 @@
 
   - users
     - GET api/users/:userId - user show page info
-    - INDEX api/users/:groupId - shows users filtered by group dealbreakers
+    - INDEX api/users/findcompatibleusers/:groupId - shows users filtered by group dealbreakers
     - POST api/users - sign up // ------- THIS ROUTE IS NO MORE --------
     - PATCH api/users/:userId - update user
 
