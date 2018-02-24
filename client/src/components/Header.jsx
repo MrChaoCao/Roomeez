@@ -29,7 +29,7 @@ class Header extends React.Component {
     return (
       <div className="header">
         <div className="header-title">
-          <a href="/"><h1>Roommez</h1></a>
+          <a href="/dashboard"><h1>Roommez</h1></a>
         </div>
           {this.renderContent()}
       </div>

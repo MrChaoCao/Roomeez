@@ -14,11 +14,11 @@ const Landing = () => {
       <section id="how-it-works">
         <h1>How It Works</h1>
         <div className="search-for-individuals-box">
-          <i class="fas fa-user-circle"></i>
+          <i className="fas fa-user-circle"></i>
           <p>Search for Individuals Who Need a Place</p>
         </div>
         <div className="search-for-groups-box">
-          <i class="fas fa-users"></i>
+          <i className="fas fa-users"></i>
           <p>Search for Groups That Need Roommates</p>
         </div>
       </section>
@@ -27,24 +27,24 @@ const Landing = () => {
         <h3>Rate Past Roommates</h3>
         <p><em>&quot;He was ok, but he kept roundhouse kicking me in the face...&quot;</em></p>
         <div className="stars-landing">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="far fa-star"></i>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+          <i className="fas fa-star"></i>
+          <i className="far fa-star"></i>
         </div>
         <h3>Check Out Other People's Rating</h3>
         <img src="chucky.jpg"></img>
         <div className="person-rating">
           <p>Chuck</p>
-          <i class="fas fa-star"></i>
+          <i className="fas fa-star"></i>
           4.7
         </div>
       </section>
       <section className="similar-interests-landing">
         <h1>Find People With Similar Interests</h1>
         <h3>Fill out survey with your interests</h3>
-        <i class="fab fa-wpforms"></i>
+        <i className="fab fa-wpforms"></i>
         <h3>We match you according to your interests</h3>
         <img src="biebs.jpg"></img>
         <div className="person-match">
