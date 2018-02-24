@@ -62,10 +62,11 @@ class UserSurvey extends React.Component {
           drinking: newState.drinking,
           pets: newState.pets,
           smoking: newState.smoking
-        }
+        },
+        id: this.props.currentUser._id
       };
-      this.setState(newObj, () => console.log(this.state));
-      // when you make the ajax call, remember to deconstruct the state
+      this.props.updateUser(newObj).then(res => console.log(res));
+      // when you make the ajax call, remember to deconstruct the
   }
 
   render() {
