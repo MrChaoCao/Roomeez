@@ -9,6 +9,7 @@ import DashboardContainer from './dashboard/dashboard_container';
 class App extends React.Component {
   componentDidMount() {
     this.props.fetchUser();
+    this.props.fetchUsers();
   }
 
   render() {

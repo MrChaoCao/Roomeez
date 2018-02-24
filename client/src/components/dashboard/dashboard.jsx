@@ -1,10 +1,6 @@
 import React from 'react';
-import ReactModal from 'react-modal';
 
 class Dashboard extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (
