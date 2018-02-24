@@ -28,7 +28,11 @@ router.get('', function(req, res) {
     if (err) {
       return res.status(404).send("Not found");
     } else {
-      return res.json(users);
+      let newObj = {};
+      users.forEach(user => {
+        newObj[user._id] = user;
+      });
+      return res.json(newObj);
     }
   });
 });
