@@ -4,25 +4,21 @@ class UserSurvey extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      interests: {
-        sports: '',
-        coding: '',
-        music: '',
-        video_games: '',
-        hiking: ''
-      },
-      thingsIDo: {
-        drinking: '',
-        pets: '',
-        smoking: ''
-      },
-      dealbreakers: {
-        drinking: '',
-        pets: '',
-        smoking: ''
-      }
+      sports: '',
+      coding: '',
+      music: '',
+      video_games: '',
+      hiking: '',
+      thingsIDoDrinking: '',
+      thingsIDoPets: '',
+      thingsIDoSmoking: '',
+      drinking: '',
+      pets: '',
+      smoking: ''
     };
+
     this.handleOptionChange = this.handleOptionChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleOptionChange(e) {
@@ -41,7 +37,34 @@ class UserSurvey extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-
+    let newState = Object.assign({}, this.state);
+    for (var property in newState) {
+        if (newState[property] === 'checked') {
+          newState[property] =  true;
+        } else {
+          newState[property] =  false;
+        }
+      }
+      let newObj = {
+        interests: {
+          sports: newState.sports,
+          coding: newState.coding,
+          music: newState.music,
+          video_games: newState.video_games,
+          hiking: newState.hiking
+        },
+        thingsIDo: {
+          drinking: newState.thingsIDoDrinking,
+          pets: newState.thingsIDoPets,
+          smoking: newState.thingsIDoSmoking
+        },
+        dealbreakers: {
+          drinking: newState.drinking,
+          pets: newState.pets,
+          smoking: newState.smoking
+        }
+      };
+      this.setState(newObj, () => console.log(this.state));
   }
 
   render() {
@@ -72,28 +95,29 @@ class UserSurvey extends React.Component {
 
           <h2>Tell Us About You</h2>
           <label>I drink
-            <input type="checkbox" value="sports" checked={this.state.sports} onChange={this.handleOptionChange} />
+            <input type="checkbox" value="thingsIDoDrinking" checked={this.state.thingsIDoDrinking} onChange={this.handleOptionChange} />
           </label>
 
           <label>I have pets
-            <input type="checkbox" value="coding" checked={this.state.coding}  onChange={this.handleOptionChange} />
+            <input type="checkbox" value="thingsIDoPets" checked={this.state.thingsIDoPets}  onChange={this.handleOptionChange} />
           </label>
 
           <label>I smoke
-            <input type="checkbox" value="music" checked={this.state.music} onChange={this.handleOptionChange} />
+            <input type="checkbox" value="thingsIDoSmoking" checked={this.state.thingsIDoSmoking} onChange={this.handleOptionChange} />
           </label>
+          <br/>
 
           <h2>Tell Us What You DO NOT Want in a Roommate</h2>
           <label>Smokes
-            <input type="checkbox" value="video_games" checked={this.state.video_games} onChange={this.handleOptionChange} />
+            <input type="checkbox" value="smoking" checked={this.state.smoking} onChange={this.handleOptionChange} />
           </label>
 
           <label>Has Pets
-            <input type="checkbox" value="hiking" checked={this.state.hiking} onChange={this.handleOptionChange} />
+            <input type="checkbox" value="pets" checked={this.state.pets} onChange={this.handleOptionChange} />
           </label>
 
           <label>Drinks
-            <input type="checkbox" value="hiking" checked={this.state.hiking} onChange={this.handleOptionChange} />
+            <input type="checkbox" value="drinking" checked={this.state.drinking} onChange={this.handleOptionChange} />
           </label>
           <br/>
           <button>Submit</button>
