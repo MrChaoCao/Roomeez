@@ -22,7 +22,7 @@ class Header extends React.Component {
               </div>
             </a>
             <p className="nametag">| {this.props.currentUser.name}</p>
-            <img
+            <img alt="profile-pic"
               className="profile-image" src={this.props.currentUser.image_url}/>
           </div>
         );
