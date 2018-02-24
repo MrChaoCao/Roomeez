@@ -65,8 +65,7 @@ class UserSurvey extends React.Component {
         },
         id: this.props.currentUser._id
       };
-      this.props.updateUser(newObj).then(res => console.log(res));
-      // when you make the ajax call, remember to deconstruct the
+      this.props.updateUser(newObj).then(() => this.props.history.push('/dashboard'));
   }
 
   render() {
