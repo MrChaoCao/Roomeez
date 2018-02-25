@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export class GroupIndexItem extends React.Component {
   render() {
     return (
+      <a href={`/groups/${this.props.group._id}`}>
       <div className="group-index-item">
         <h3>{this.props.group.name}</h3>
         <div className="group-index-member-list">
@@ -12,6 +14,7 @@ export class GroupIndexItem extends React.Component {
           })}
         </div>
       </div>
+    </a>
     );
   }
 }
