@@ -83,7 +83,7 @@ input {
 
 .masthead-image {
   background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('friends.jpg');
-  height: 700px;
+  height: 800px;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -97,7 +97,7 @@ input {
   line-height: 1;
   -webkit-backdrop-filter: blur(10px);
   width: 100%;
-  height: 700px;
+  height: 800px;
   position: absolute;
 }
 
