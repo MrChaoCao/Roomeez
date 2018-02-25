@@ -72,6 +72,16 @@ router.patch('/:groupId', function(req, res) {
     }
   });
 });
+//
+// router.get('/:groupId/users', function(req, res) {
+//   User.find({ group_id: req.params.groupId }).then((err, users) => {
+//     if (err) {
+//       return res.send({ message: err});
+//     } else {
+//       return res.json(users);
+//     }
+//   });
+// });
 
 // router.get(“/api/groups”, function(){console.log(“MW”);}, GroupsController.get_all_based_on_match);
 
