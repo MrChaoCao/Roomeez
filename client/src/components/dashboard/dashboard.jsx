@@ -1,11 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 class Dashboard extends React.Component {
   renderGroup(currentUserGroup) {
     let groupMembers = [];
     currentUserGroup.members.forEach((userId) => {
-      groupMembers.push(this.props.users[userId]);
+      if (this.props.currentUser._id !== userId) {
+        groupMembers.push(this.props.users[userId]);
+      }
     });
 
     return (
@@ -15,6 +17,7 @@ class Dashboard extends React.Component {
           {
             groupMembers.map((user) => (
               <img
+                alt=""
                 className="user-pic no-more-roommates"
                 key={user._id}
                 src={user.image_url}>
@@ -38,7 +41,7 @@ class Dashboard extends React.Component {
         </div>
       );
     }
-
+    
     let currentUserGroup = this.props.groups[groupId];
 
     // User is group admin
@@ -65,16 +68,19 @@ class Dashboard extends React.Component {
   }
 
   render() {
-
-    if (this.props.currentUser === null ||
-        this.props.currentUser === false) {
+    if (Object.keys(this.props.users).length === 0 ||
+        Object.keys(this.props.groups).length === 0 ||
+        this.props.currentUser === null ||
+        this.props.currentUser === false
+       )
+    {
       return null;
     }
 
     return (
       <section className="dashboard">
 
-        <img src={this.props.currentUser.image_url}></img>
+        <img alt="" src={this.props.currentUser.image_url}></img>
         <section className="title-block">
           <h1>{this.props.currentUser.name}s Dashboard</h1>
           {this.renderSubtitle()}
