@@ -1,0 +1,38 @@
+.group-index {
+  height: 100%;
+  text-align: center;
+}
+
+.group-index h1{
+  margin: 20px;
+  font-size: 60px;
+}
+
+.group-index-item {
+  width: 600px;
+  min-height: 600px;
+  background: white;
+  display: inline-block;
+  border-radius: 5px;
+  margin: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.group-index-item:hover {
+  cursor: pointer;
+  box-shadow: inset 0px 0px 5px #ff3b3f;
+  border: 1px solid #ff3b3f;
+}
+
+.group-index-item h3 {
+  font-size: 40px;
+}
+
+.group-index-member-list img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: inline-block;
+  image-rendering: crisp-edges;
+  padding: 10px;
+}
