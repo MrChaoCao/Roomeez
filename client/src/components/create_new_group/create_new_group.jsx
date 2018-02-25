@@ -4,25 +4,34 @@ export class CreateNewGroup extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      inputVal: ''
+      inputVal: '',
+      invitations: []
     };
-    this.selectName = this.selectName.bind(this);
     this.handleInput = this.handleInput.bind(this);
+    this.sendRequest = this.sendRequest.bind(this);
+    this.renderInvitationsSent = this.renderInvitationsSent.bind(this);
   }
 
   handleInput(event) {
-    this.setState({inputVal: event.currentTarget.value}, () => {
-      return this.matches().map((result) => {
-        return (
-          <li key={result._id} onClick={this.selectName}>{result.name}</li>
-        );
-      });
-    });
+    this.setState({inputVal: event.currentTarget.value});
   }
 
-  selectName(event) {
-    let name = event.currentTarget.innerText;
-    this.setState({inputVal: name});
+  renderInvitationsSent() {
+    return (
+      <div>
+        <h3>Invitations Sent</h3>
+      {this.state.invitations.map(name => {
+        return <li key={name}>{name}</li>;
+      })
+    }
+    </div>
+    );
+  }
+
+  sendRequest(e) {
+    this.setState({inputVal: ''});
+    let newArr = this.state.invitations.concat(e.target.value);
+    this.setState({invitations: newArr});
   }
 
   matches() {
@@ -36,7 +45,15 @@ export class CreateNewGroup extends React.Component {
         matches.push(user.name);
       }
     });
-    return matches;
+
+    return matches.map(name => {
+      return (
+        <div key={name}>
+          {name}
+          <button value={name} onClick={this.sendRequest}>Request to Add</button>
+        </div>
+      );
+    });
   }
 
   render() {
@@ -50,6 +67,7 @@ export class CreateNewGroup extends React.Component {
             value={this.state.inputVal}
             placeholder='Search...'/>
           {results}
+          {this.renderInvitationsSent()}
         </div>
       );
     } else {
