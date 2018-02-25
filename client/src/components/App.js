@@ -10,6 +10,7 @@ class App extends React.Component {
   componentDidMount() {
     this.props.fetchUser();
     this.props.fetchUsers();
+    this.props.fetchGroups();
   }
 
   render() {
