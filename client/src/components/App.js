@@ -8,6 +8,7 @@ import DashboardContainer from './dashboard/dashboard_container';
 import GroupIndexContainer from './group_index_container';
 import UserIndexContainer from './user_index_container';
 import GroupShowContainer from './group_show/group_show_container';
+import CreateNewGroupContainer from './create_new_group/create_new_group_container';
 
 class App extends React.Component {
   componentDidMount() {
@@ -29,6 +30,7 @@ class App extends React.Component {
               <Route exact path="/groups" component={GroupIndexContainer}/>
               <Route exact path="/users/" component={UserIndexContainer}/>
               <Route exact path="/groups/:groupId" component={GroupShowContainer}/>
+              <Route exact path="/groups/new" component={CreateNewGroupContainer}/>
             </div>
           </BrowserRouter>
         </div>
