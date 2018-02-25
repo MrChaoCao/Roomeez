@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const router = express.Router();
 const Group = require('../models/group');
 // const GroupsController = require('../controllers/GroupsController');
-const User = mongoose.model('User');
+// const User = mongoose.model('User');
 
 // const checkAuth = require(‘../middleware/check-auth’);
 
