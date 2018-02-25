@@ -1,6 +1,15 @@
 import React from 'react';
+import $ from 'jquery';
 
 const Landing = () => {
+  $('#learn-more').on('click', function(e){
+    e.preventDefault();
+    console.log('clicked');
+    $('html, body').stop().animate({
+       scrollTop: $('#how-it-works').offset().top
+    }, 1000);
+  });
+
   return (
     <div>
       <section className="masthead">
@@ -9,7 +18,7 @@ const Landing = () => {
         <div className="masthead-box">
           <h1>Find Your Next Roommate(s)</h1>
         </div>
-        <a href="#how-it-works">Learn More</a>
+        <a id="learn-more" href="#how-it-works">Learn More</a>
       </section>
       <section id="how-it-works">
         <h1>How It Works</h1>
