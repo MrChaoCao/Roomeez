@@ -23,7 +23,7 @@
 
   - users
     - GET api/users/:userId - user show page info
-    - INDEX api/users - shows users filtered by dealbreakers
+    - INDEX api/users/findcompatibleusers/:groupId - shows users filtered by group dealbreakers
     - POST api/users - sign up // ------- THIS ROUTE IS NO MORE --------
     - PATCH api/users/:userId - update user
 
@@ -33,7 +33,7 @@
     - POST api/groups - create new group
     - PATCH api/groups/:id - update group
     - DELETE api/groups/:id - delete a group
-    
+
   - reviews
     - POST /api/users/:id/reviews - create new review for a user
     - INDEX /api/users/:id/reviews - show user's reviews

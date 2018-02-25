@@ -34,7 +34,7 @@ const Landing = () => {
           <i className="far fa-star"></i>
         </div>
         <h3>Check Out Other People's Rating</h3>
-        <img src="chucky.jpg"></img>
+        <img alt="chuck" src="chucky.jpg"></img>
         <div className="person-rating">
           <p>Chuck</p>
           <i className="fas fa-star"></i>
@@ -46,7 +46,7 @@ const Landing = () => {
         <h3>Fill out survey with your interests</h3>
         <i className="fab fa-wpforms"></i>
         <h3>We match you according to your interests</h3>
-        <img src="biebs.jpg"></img>
+        <img alt="bieber" src="biebs.jpg"></img>
         <div className="person-match">
           <p>Biebs</p>
           <p style={{color: "green"}}>97% Match!</p>
