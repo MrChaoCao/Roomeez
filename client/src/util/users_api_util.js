@@ -1,8 +1,14 @@
 import $ from 'jquery';
 
-export const fetchUser = () => {
+export const fetchCurrentUser = () => {
   return $.ajax({
     url: `/api/current_user`
+  });
+};
+
+export const fetchUser = (userId) => {
+  return $.ajax({
+    url: `/api/user/${userId}`
   });
 };
 

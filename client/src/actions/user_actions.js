@@ -4,8 +4,13 @@ export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const RECEIVE_USER = 'RECEIVE_USER';
 export const RECEIVE_ALL_USERS = 'RECEIVE_ALL_USERS';
 
-export const fetchUser = () => dispatch => {
-  return APIutil.fetchUser()
+export const fetchUser = (userId) => dispatch => {
+  return APIutil.fetchUser(userId)
+  .then(serverUser => dispatch(receiveUser(serverUser)));
+};
+
+export const fetchCurrentUser = () => dispatch => {
+  return APIutil.fetchCurrentUser()
   .then(serverUser => dispatch(receiveCurrentUser(serverUser)));
 };
 
