@@ -241,3 +241,52 @@ input {
   align-items: center;
   font-size: 24px;
 }
+
+.user_show_container{
+  padding: 20px;
+}
+
+.show-name-and-pic{
+  display: flex;
+  font-weight: 800;
+  align-items: center;
+}
+.show-name-and-pic h1 {
+  font-size: 48px;
+}
+
+.pic{
+  width: 116px;
+}
+
+.pic-line{
+  margin-left: 20px;
+}
+
+.show-lists {
+  border-bottom: 1px solid black;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  padding: 10px;
+  margin-left: 1%;
+}
+
+.show-lines{
+  margin-top: 20px;
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+  width: 90%;
+}
+
+.show-lists li {
+  padding: 10px;
+}
+
+
+.name-line{
+  height: 1.5px;
+  width: 400px;
+  background-color: black;
+}

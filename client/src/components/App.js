@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Landing from './landing';
 import UserSurveyContainer from './user_survey_container';
 
+import UserShowContainer from './user_show_container';
 import HeaderContainer from './Header_container';
 import DashboardContainer from './dashboard/dashboard_container';
 
@@ -21,6 +22,7 @@ class App extends React.Component {
               <Route exact path="/" component={Landing}/>
               <Route path="/survey" component={UserSurveyContainer}/>
               <Route path="/dashboard" component={DashboardContainer}/>
+              <Route exact path="/users/:userId" component={UserShowContainer}/>
             </div>
           </BrowserRouter>
         </div>
