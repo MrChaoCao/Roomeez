@@ -1,0 +1,34 @@
+button {
+  border: 1px solid #ff3b3f;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+  background: #fff;
+  color: #ff3b3f;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  border: 1px solid #ff3b3f;
+  color: white;
+  background: #ff3b3f;
+  transition: background 0.5s ease;
+}
+
+.user-survey {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  width: 1000px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-left: 200px;
+  margin-top: 40px;
+  align-self: center;
+}
+
+.user-survey input {
+  margin-left: 10px;
+}

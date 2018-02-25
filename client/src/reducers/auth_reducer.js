@@ -1,4 +1,4 @@
-import { RECEIVE_CURRENT_USER } from '../actions/user_actions';
+import { RECEIVE_CURRENT_USER, RECEIVE_USER } from '../actions/user_actions';
 
 export default function(state = null, action) {
   switch (action.type) {
@@ -6,6 +6,8 @@ export default function(state = null, action) {
       // if the user is logged out, payload will be "",
       // but we want it to be false
       return action.payload || false;
+    case RECEIVE_USER:
+      return action.payload;
     default:
       return state;
   }

@@ -24,10 +24,17 @@ router.get('/:userId', function(req, res) {
 });
 
 router.get('', function(req, res) {
-  // This route returns all other users that match a group's survey results.
-  // This is the user output from the hard filter.
-  console.log("Can't work on this yet.");
-  res.send("Each user needs to have a filled out survey before we can finish this.");
+  User.find().exec((err, users) => {
+    if (err) {
+      return res.status(404).send("Not found");
+    } else {
+      let newObj = {};
+      users.forEach(user => {
+        newObj[user._id] = user;
+      });
+      return res.json(newObj);
+    }
+  });
 });
 
 router.patch('/:userId', function(req, res) {

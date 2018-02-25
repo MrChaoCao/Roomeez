@@ -7,7 +7,8 @@ const cookieSession = require('cookie-session');
 const passport = require('passport');
 const keys = require('./config/keys');
 
-require('./models/User');
+const User = require('./models/User');
+// const Group = require('./models/Group');
 require('./services/passport');
 
 mongoose.connect(keys.mongoURI);
@@ -52,7 +53,6 @@ const searchusersRoutes = require("./routes/searchusers");
 const groupRoutes = require("./routes/groups");
 app.use('/api/users', userRoutes);
 app.use('/api/searchusers', searchusersRoutes);
-
 app.use('/api/groups', groupRoutes);
 
 
@@ -66,14 +66,6 @@ app.use('/api/groups', groupRoutes);
 //   }
 // }));
 
-// ADRIAN COMMENT
-// I don't know if we want this here. This might be what heroku is reading
-// app.get('/', (req, res) => {
-//   numOfProcessedRequests++;
-//   console.log(`Server has processed ${numOfProcessedRequests} requests!`);
-//   res.send(`Server has processed ${numOfProcessedRequests} requests!`);
-//   // res.sendFile(path.join(__dirname, '/frontend/react_index.html'));
-// });
 
 // Run local server on port 5000.
 const port = process.env.PORT || 5000;

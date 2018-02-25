@@ -1,13 +1,19 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Landing from './landing';
-
+import UserSurveyContainer from './user_survey_container';
+import UserShowContainer from './user_show_container';
 import HeaderContainer from './Header_container';
-const Dashboard = () => <h2>Dashboard</h2>;
+import DashboardContainer from './dashboard/dashboard_container';
+import GroupIndexContainer from './group_index_container';
+import UserIndexContainer from './user_index_container';
+import GroupShowContainer from './group_show/group_show_container';
 
 class App extends React.Component {
   componentDidMount() {
-    this.props.fetchUser();
+    this.props.fetchCurrentUser();
+    this.props.fetchUsers();
+    this.props.fetchGroups();
   }
 
   render() {
@@ -17,7 +23,12 @@ class App extends React.Component {
             <div>
               <HeaderContainer/>
               <Route exact path="/" component={Landing}/>
-              <Route path="/dashboard" component={Dashboard}/>
+              <Route path="/survey" component={UserSurveyContainer}/>
+              <Route path="/dashboard" component={DashboardContainer}/>
+              <Route exact path="/users/:userId" component={UserShowContainer}/>
+              <Route exact path="/groups" component={GroupIndexContainer}/>
+              <Route exact path="/users/" component={UserIndexContainer}/>
+              <Route exact path="/groups/:groupId" component={GroupShowContainer}/>
             </div>
           </BrowserRouter>
         </div>

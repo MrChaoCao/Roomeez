@@ -18,6 +18,20 @@ h1 {
   font-size: 32px;
 }
 
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+input {
+  border: 1px solid #a9a9a9;
+}
+
 .header {
   width: 100%;
   height: 70px;
@@ -31,12 +45,29 @@ h1 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.user-nav-icons{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.nametag{
+  margin: 0px 23px 0 5px;
+}
+
+.profile-image{
+  width: 40px;
+  height: 40px;
+  border-radius: 18px;
+}
+
 .header-links {
   border: 1px solid white;
   cursor: pointer;
   padding: 10px;
   border-radius: 4px;
 }
+
 
 .header-links:hover {
   background: white;
@@ -52,7 +83,7 @@ h1 {
 
 .masthead-image {
   background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('friends.jpg');
-  height: 700px;
+  height: 800px;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -66,7 +97,7 @@ h1 {
   line-height: 1;
   -webkit-backdrop-filter: blur(10px);
   width: 100%;
-  height: 700px;
+  height: 800px;
   position: absolute;
 }
 
@@ -209,4 +240,53 @@ h1 {
   flex-direction: column;
   align-items: center;
   font-size: 24px;
+}
+
+.user_show_container{
+  padding: 20px;
+}
+
+.show-name-and-pic{
+  display: flex;
+  font-weight: 800;
+  align-items: center;
+}
+.show-name-and-pic h1 {
+  font-size: 48px;
+}
+
+.pic{
+  width: 116px;
+}
+
+.pic-line{
+  margin-left: 20px;
+}
+
+.show-lists {
+  border-bottom: 1px solid black;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  padding: 10px;
+  margin-left: 1%;
+}
+
+.show-lines{
+  margin-top: 20px;
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+  width: 90%;
+}
+
+.show-lists li {
+  padding: 10px;
+}
+
+
+.name-line{
+  height: 1.5px;
+  width: 400px;
+  background-color: black;
 }
