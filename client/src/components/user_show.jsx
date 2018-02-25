@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class UserShow extends React.Component {
-  debugger
+  
     componentDidMount() {
       this.props.fetchUser(this.props.userId);
     }
@@ -59,7 +59,7 @@ class UserShow extends React.Component {
                 <h1 className="show-lines">About:
                 </h1>
                 <p className="show-lists">
-                  {this.props.user.about} 
+                  {this.props.user.about}
                 </p>
               </div>
             )
