@@ -20,7 +20,7 @@ const userSchema = new Schema({
     required: [true, 'Must signup by logging in to Facebook']
   },
   group_id: {
-    type: Number,
+    type: String,
     default: null
   },
   image_url: {

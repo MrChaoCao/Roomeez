@@ -6,7 +6,7 @@ import UserSurveyContainer from './user_survey_container';
 import HeaderContainer from './Header_container';
 import DashboardContainer from './dashboard/dashboard_container';
 import UserIndexContainer from './user_index_container';
-import GroupShowContainer from './group/group_show_container';
+import GroupShowContainer from './group_show/group_show_container';
 
 class App extends React.Component {
   componentDidMount() {
