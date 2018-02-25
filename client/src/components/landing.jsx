@@ -23,7 +23,7 @@ const Landing = () => {
         </div>
       </section>
       <section className="no-more-roommates">
-        <h1>No More Crappy Rommmates!</h1>
+        <h1>No More Crappy Roommates!</h1>
         <h3>Rate Past Roommates</h3>
         <p><em>&quot;He was ok, but he kept roundhouse kicking me in the face...&quot;</em></p>
         <div className="stars-landing">
