@@ -5,6 +5,7 @@ import UserSurveyContainer from './user_survey_container';
 import HeaderContainer from './Header_container';
 import DashboardContainer from './dashboard/dashboard_container';
 import GroupIndexContainer from './group_index_container';
+import UserIndexContainer from './user_index_container';
 
 class App extends React.Component {
   componentDidMount() {
@@ -23,6 +24,7 @@ class App extends React.Component {
               <Route path="/survey" component={UserSurveyContainer}/>
               <Route path="/dashboard" component={DashboardContainer}/>
               <Route exact path="/groups" component={GroupIndexContainer}/>
+              <Route exact path="/users/" component={UserIndexContainer}/>
             </div>
           </BrowserRouter>
         </div>

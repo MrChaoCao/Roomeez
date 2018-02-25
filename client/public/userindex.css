@@ -1,0 +1,29 @@
+.content-narrow {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+section.user-index {
+  margin-top: 60px;
+}
+
+section.user-index ul {
+}
+
+section.user-index li {
+  display: inline-block;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 30px;
+}
+
+section.user-index img {
+  margin: 0 auto;
+  width: 15em;
+  height: 15em;
+  border-radius: 10em;
+}
+
+section.user-index h3 {
+  text-align: center;
+}
