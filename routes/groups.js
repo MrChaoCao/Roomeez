@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const router = express.Router();
-const Group = require('../models/group');
+const Group = require('../models/Group');
 // const GroupsController = require('../controllers/GroupsController');
 // const User = mongoose.model('User');
 
