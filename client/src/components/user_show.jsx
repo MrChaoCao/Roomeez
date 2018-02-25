@@ -42,17 +42,6 @@ class UserShow extends React.Component {
             </div>
           }
 
-<<<<<<< HEAD
-            {this.props.user.about && (
-              <div>
-                <h1 className="show-lines">About:
-                </h1>
-                <p className="show-lists">
-                  {this.props.user.about}
-                </p>
-              </div>
-            )
-=======
           {this.props.user.thingsIDo &&
             <div>
               <h1 className="show-lines">Things I Do</h1>
@@ -62,9 +51,10 @@ class UserShow extends React.Component {
                 ))}
               </ul>
             </div>
->>>>>>> 19bac846dd2a70acebb9b206bb4f2ba5f67c1f43
           }
 
+=======
+>>>>>>> f6a352b20ec50b0b91f9700413e0193671d642ba
           {this.props.user.about && (
             <div>
               <h1 className="show-lines">About:
