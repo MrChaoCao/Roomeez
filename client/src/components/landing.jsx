@@ -4,7 +4,6 @@ import $ from 'jquery';
 const Landing = () => {
   $('#learn-more').on('click', function(e){
     e.preventDefault();
-    console.log('clicked');
     $('html, body').stop().animate({
        scrollTop: $('#how-it-works').offset().top
     }, 1000);
