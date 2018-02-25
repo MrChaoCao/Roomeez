@@ -260,6 +260,8 @@ input {
 }
 
 .pic img{
+  width: 116px;
+  height: 116px;
   border-radius: 50%;
 }
 
