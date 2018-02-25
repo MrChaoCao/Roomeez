@@ -1,17 +1,17 @@
 button {
-  border: 1px solid white;
+  border: 1px solid #ff3b3f;
   cursor: pointer;
   padding: 10px;
   border-radius: 4px;
-  background: #ff3b3f;
-  color: white;
+  background: #fff;
+  color: #ff3b3f;
   margin-bottom: 10px;
 }
 
 button:hover {
   border: 1px solid #ff3b3f;
-  color: #ff3b3f;
-  background: white;
+  color: white;
+  background: #ff3b3f;
   transition: background 0.5s ease;
 }
 

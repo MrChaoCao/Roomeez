@@ -72,7 +72,7 @@ class UserSurvey extends React.Component {
     return (
       <form onSubmit={this.handleSubmit} className="user-survey">
         <h1>Tell Us What You Want, What you Really, Really Want...</h1>
-          <h2>Interests</h2>
+          <h2>What You're Into</h2>
           <label>Sports
             <input type="checkbox" value="sports" checked={this.state.sports} onChange={this.handleOptionChange} />
           </label>
@@ -94,7 +94,7 @@ class UserSurvey extends React.Component {
           </label>
           <br/>
 
-          <h2>Tell Us About You</h2>
+          <h2>About You</h2>
           <label>I drink
             <input type="checkbox" value="thingsIDoDrinking" checked={this.state.thingsIDoDrinking} onChange={this.handleOptionChange} />
           </label>
@@ -108,7 +108,7 @@ class UserSurvey extends React.Component {
           </label>
           <br/>
 
-          <h2>Tell Us What You DO NOT Want in a Roommate</h2>
+          <h2>What You DO NOT Want in a Roommate</h2>
           <label>Smokes
             <input type="checkbox" value="smoking" checked={this.state.smoking} onChange={this.handleOptionChange} />
           </label>
