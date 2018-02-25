@@ -3,7 +3,8 @@ import GroupIndex from './group_index';
 
 const mapStateToProps = state => {
   return {
-    groups: state.entities.groups
+    groups: state.entities.groups,
+    users: state.entities.users
   };
 };
 
