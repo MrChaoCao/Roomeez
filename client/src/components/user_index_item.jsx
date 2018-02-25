@@ -8,6 +8,7 @@ const UserIndexItem = ({ user }) => {
     <div className="user-index-item">
       <Link to={renderHref(user._id)}>
         <img
+          alt=""
           className="user-pic no-more-roommates"
           src={user.image_url}>
         </img>
