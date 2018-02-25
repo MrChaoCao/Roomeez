@@ -35,5 +35,6 @@
 
 .group-user img:hover {
   border: 1px solid #ff3b3f;
+  cursor: pointer;
   transition: 0.2s;
 }
