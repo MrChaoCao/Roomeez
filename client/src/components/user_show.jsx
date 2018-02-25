@@ -1,11 +1,10 @@
 import React from 'react';
 
 class UserShow extends React.Component {
-  
+
     componentDidMount() {
       this.props.fetchUser(this.props.userId);
     }
-
 
   render () {
     if (this.props.user){
@@ -43,6 +42,19 @@ class UserShow extends React.Component {
             </div>
           }
 
+          {this.props.user.thingsIDo &&
+            <div>
+              <h1 className="show-lines">Things I Do</h1>
+              <ul className="show-lists">
+                {Object.keys(this.props.user.thingsIDo).map((thingsIDo, i) => (
+                  <li key={`thingsIDo-${i}`}> {thingsIDo} </li>
+                ))}
+              </ul>
+            </div>
+          }
+
+=======
+>>>>>>> f6a352b20ec50b0b91f9700413e0193671d642ba
           {this.props.user.about && (
             <div>
               <h1 className="show-lines">About:
