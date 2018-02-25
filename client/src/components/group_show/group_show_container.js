@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import GroupShow from './group_show';
-import { fetchGroup, deleteGroup } from '../../actions/group_actions';
+import { fetchGroup } from '../../actions/group_actions';
 import { fetchUser } from '../../actions/user_actions';
 import { selectUsers } from '../../reducers/selectors';
 
@@ -16,7 +16,6 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     fetchGroup: (id) => dispatch(fetchGroup(id)),
-    deleteGroup: (id) => dispatch(deleteGroup(id)),
     fetchUser: (id) => dispatch(fetchUser(id))
   };
 };

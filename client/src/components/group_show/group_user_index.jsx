@@ -2,15 +2,16 @@ import React from 'react';
 
 class GroupUserIndex extends React.Component {
   render() {
-    let users = this.props.users;
     return (
       <div className="group-user-index">
         {
           this.props.users.map(user => {
             return (
-              <div className="group-user">
-                <img src={`${user.image_url}`}/>
-                <span key={user._id}>{user.name}</span>
+              <div className="group-user" key={user._id}>
+                <img src={`${user.image_url}`}
+                     onClick={() => this.props.history.push(`/users/${user._id}`)}
+                     alt={user.name}/>
+                <span>{user.name}</span>
               </div>
             );
           })

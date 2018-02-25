@@ -3,13 +3,12 @@ import GroupUserIndexContainer from './group_user_index_container';
 
 class GroupShow extends React.Component {
   componentDidMount() {
-    const { groupId, groups, fetchGroup, fetchGroupUsers } = this.props;
-    console.warn("component mounted HERE");
-    fetchGroup(this.props.groupId).then(console.warn);
+    const { groupId, fetchGroup } = this.props;
+    fetchGroup(groupId).then(console.warn);
   }
 
   render() {
-    const { deleteGroup, groups, groupId, users } = this.props;
+    const { groups, groupId, users } = this.props;
     let group = groups[groupId];
     return group && JSON.stringify(users) !== JSON.stringify([]) ? (
       <div className="group-show-page">
