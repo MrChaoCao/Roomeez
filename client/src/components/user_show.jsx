@@ -21,33 +21,45 @@ class UserShow extends React.Component {
               </div>
             </div>
 
-            <h1 className="show-lines">Interests</h1>
-            <ul className="show-lists">
-              {Object.keys(this.props.user.interests).map((interest, i) => (
-                <li key={`interest-${i}`}> {interest} </li>
-              ))}
-            </ul>
+            {this.props.user.interests &&
+              <div>
+                <h1 className="show-lines">Interests</h1>
+                <ul className="show-lists">
+                  {Object.keys(this.props.user.interests).map((interest, i) => (
+                    <li key={`interest-${i}`}> {interest} </li>
+                  ))}
+                </ul>
+              </div>
+            }
 
-            <h1 className="show-lines">Dealbreakers</h1>
-            <ul className="show-lists">
-              {Object.keys(this.props.user.dealbreakers).map((dealbreaker, i) => (
-                <li key={`dealbreaker-${i}`}> {dealbreaker} </li>
-              ))}
-            </ul>
+            {this.props.user.dealbreakers &&
+              <div>
+                <h1 className="show-lines">Dealbreakers</h1>
+                <ul className="show-lists">
+                  {Object.keys(this.props.user.dealbreakers).map((dealbreaker, i) => (
+                    <li key={`dealbreaker-${i}`}> {dealbreaker} </li>
+                  ))}
+                </ul>
+              </div>
+            }
 
-            <h1 className="show-lines">Things I Do</h1>
-            <ul className="show-lists">
-              {Object.keys(this.props.user.thingsIDo).map((thingsIDo, i) => (
-                <li key={`thingsIDo-${i}`}> {thingsIDo} </li>
-              ))}
-            </ul>
+            {this.props.user.thingsIDo &&
+              <div>
+                <h1 className="show-lines">Things I Do</h1>
+                <ul className="show-lists">
+                  {Object.keys(this.props.user.thingsIDo).map((thingsIDo, i) => (
+                    <li key={`thingsIDo-${i}`}> {thingsIDo} </li>
+                  ))}
+                </ul>
+              </div>
+            }
 
             {this.props.user.about && (
               <div>
                 <h1 className="show-lines">About:
                 </h1>
                 <p className="show-lists">
-                  {this.props.user.about}
+                  {this.props.user.about} 
                 </p>
               </div>
             )

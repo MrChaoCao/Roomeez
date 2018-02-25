@@ -259,6 +259,10 @@ input {
   width: 116px;
 }
 
+.pic img{
+  border-radius: 50%;
+}
+
 .pic-line{
   margin-left: 20px;
 }
