@@ -2,7 +2,7 @@ import { RECEIVE_GROUPS, RECEIVE_GROUP, REMOVE_GROUP } from '../actions/group_ac
 import { merge } from 'lodash';
 
 
-const groupsReducer = (state = {}, action) => {
+export const groupsReducer = (state = {}, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_GROUPS:
@@ -17,5 +17,3 @@ const groupsReducer = (state = {}, action) => {
       return state;
   }
 };
-
-export default groupsReducer;

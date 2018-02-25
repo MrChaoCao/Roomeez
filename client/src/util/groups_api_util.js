@@ -1,6 +1,6 @@
 import $ from "jquery";
 
-export const fetchGroups = (deckId) => {
+export const fetchGroups = () => {
   return $.ajax({
     method: "GET",
     url: `/api/groups`,
@@ -33,14 +33,7 @@ export const deleteGroup = (id) => {
   });
 };
 
-export const fetchGroupUsers = (groupId) => {
-  return $.ajax({
-    method: "GET",
-    url: `/api/groups/${groupId}/users`,
-    error: err => console.log(err)
-  });
-};
-
+// potentially not working
 // export const updateGroup = (payload) => {
 //   return $.ajax({
 //     method: "PATCH",

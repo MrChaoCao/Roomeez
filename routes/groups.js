@@ -1,6 +1,9 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const router = express.Router();
 const Group = require('../models/group');
+// const GroupsController = require('../controllers/GroupsController');
+const User = mongoose.model('User');
 
 // const checkAuth = require(‘../middleware/check-auth’);
 
@@ -21,13 +24,15 @@ router.get('/:groupId', function(req, res) {
 
 // need to get all based on match
 router.get('', function(req, res) {
-  console.log("req.user !!!!", req.user);
-  Group.find({}).then((err, groups) => {
+  Group.find().exec((err, groups) => {
     if (err) {
-      return res.send({ message: err });
+      return res.status(404).send("Not found");
     } else {
-      // if there are dealbreakers, filter them out here.
-      return res.json(groups);
+      let newObj = {};
+      groups.forEach(group => {
+        newObj[group._id] = group;
+      });
+      return res.json(newObj);
     }
   });
 });
@@ -35,6 +40,7 @@ router.get('', function(req, res) {
 router.post('', function(req, res) {
   let newGroup = new Group(req.body);
   // newGroup.admin_user_id = current_user.id // need a current user helper here
+  console.log("req.user !!!", req.user);
   newGroup.admin_user_id = req.user.id;
   newGroup.save((err, user)=> {
     if (err) {
@@ -66,6 +72,16 @@ router.patch('/:groupId', function(req, res) {
     }
   });
 });
+//
+// router.get('/:groupId/users', function(req, res) {
+//   User.find({ group_id: req.params.groupId }).then((err, users) => {
+//     if (err) {
+//       return res.send({ message: err});
+//     } else {
+//       return res.json(users);
+//     }
+//   });
+// });
 
 // router.get(“/api/groups”, function(){console.log(“MW”);}, GroupsController.get_all_based_on_match);
 
