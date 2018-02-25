@@ -11,7 +11,7 @@ import GroupShowContainer from './group_show/group_show_container';
 
 class App extends React.Component {
   componentDidMount() {
-    this.props.fetchUser();
+    this.props.fetchCurrentUser();
     this.props.fetchUsers();
     this.props.fetchGroups();
   }
