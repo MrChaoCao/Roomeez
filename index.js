@@ -7,7 +7,8 @@ const cookieSession = require('cookie-session');
 const passport = require('passport');
 const keys = require('./config/keys');
 
-require('./models/User');
+const User = require('./models/User');
+// const Group = require('./models/Group');
 require('./services/passport');
 
 mongoose.connect(keys.mongoURI);
@@ -52,7 +53,6 @@ const searchusersRoutes = require("./routes/searchusers");
 const groupRoutes = require("./routes/groups");
 app.use('/api/users', userRoutes);
 app.use('/api/searchusers', searchusersRoutes);
-
 app.use('/api/groups', groupRoutes);
 
 

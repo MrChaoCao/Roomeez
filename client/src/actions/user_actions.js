@@ -2,6 +2,7 @@ import * as APIutil from '../util/users_api_util';
 
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const RECEIVE_USER = 'RECEIVE_USER';
+export const RECEIVE_ALL_USERS = 'RECEIVE_ALL_USERS';
 
 export const fetchUser = () => dispatch => {
   return APIutil.fetchUser()
@@ -23,6 +24,18 @@ export const updateUser = data => dispatch => {
 const receiveUser = payload => {
   return {
     type: RECEIVE_USER,
+    payload
+  };
+};
+
+export const fetchUsers = () => dispatch => {
+  return APIutil.fetchUsers()
+    .then(serverUsers => dispatch(receiveAllUsers(serverUsers)));
+};
+
+const receiveAllUsers = payload => {
+  return {
+    type: RECEIVE_ALL_USERS,
     payload
   };
 };

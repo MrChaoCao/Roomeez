@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const Group = require('../models/group');
-// const GroupsController = require('../controllers/GroupsController');
 
 // const checkAuth = require(‘../middleware/check-auth’);
 

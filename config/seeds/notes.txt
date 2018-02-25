@@ -1,0 +1,29 @@
+dealbreakers {
+  drinking: false,
+  pets: false,
+  smoking: false
+}
+thingsIDo {
+  drinking: false,
+  pets: false,
+  smoking: false
+}
+interests {
+  sports
+  coding
+}
+
+git fetch
+git reset --hard origin/master
+
+User_ids
+5a8da9f7891c97d407b759f8 - Adrian
+5a8f01d1858f2652b5891fc2 - Wyatt
+5a905026be0e226095060544 - Chao
+5a90699f275b656933d5fc07 - Ashil
+
+Group_ids
+5a91352fb75ec2700d7bd633 - Adrian's Group
+5a913587b75ec2700d7bd634 - Wyatt's
+5a9135acb75ec2700d7bd635 - Chao's
+5a9136a9b75ec2700d7bd637 - Ashil's
