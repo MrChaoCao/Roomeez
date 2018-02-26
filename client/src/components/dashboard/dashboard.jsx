@@ -92,16 +92,10 @@ class Dashboard extends React.Component {
       // User in a group but not admin
       // <button>Leave Group</button>
       return (
-<<<<<<< HEAD
         <div className="group-subtitle">
           <div className="dash-group-header">
             <h2 className="dash-my-group">My group: {currentUserGroup.name}</h2>
             <button>Leave Group</button>
-=======
-        <div>
-          <div>
-            <h2>My group: {currentUserGroup.name}</h2>
->>>>>>> b75126ae22166c97dcf932cb74bf36654a5157aa
           </div>
           {this.renderGroupPics(currentUserGroup)}
         </div>
@@ -147,37 +141,22 @@ class Dashboard extends React.Component {
           <div className="search-blocks">
             <div className="search-block" id="people-looking">
               <Link to="/users">
-<<<<<<< HEAD
                 <div className="icon-holder">
                   <i id="search-icon" className="fas fa-user-circle"/>
                 </div>
                   <p>
-=======
-                <i className="fas fa-user-circle"></i>
-                <h3>
-                  <span className="h3-mod">
->>>>>>> b75126ae22166c97dcf932cb74bf36654a5157aa
                     Find people looking for roommates
                   </p>
               </Link>
             </div>
             <div className="search-block" id="groups-looking">
               <Link to="/groups">
-<<<<<<< HEAD
                 <div className="icon-holder">
                   <i id="search-icon" className="fas fa-users"/>
                 </div>
                 <p>
                   Find groups looking for roommates
                 </p>
-=======
-                <i className="fas fa-users"></i>
-                <h3>
-                  <span className="h3-mod">
-                    Find groups looking for roommates
-                  </span>
-                </h3>
->>>>>>> b75126ae22166c97dcf932cb74bf36654a5157aa
               </Link>
             </div>
           </div>
