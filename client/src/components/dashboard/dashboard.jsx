@@ -41,7 +41,7 @@ class Dashboard extends React.Component {
         </div>
       );
     }
-    
+
     let currentUserGroup = this.props.groups[groupId];
 
     // User is group admin
@@ -80,7 +80,7 @@ class Dashboard extends React.Component {
     return (
       <section className="dashboard">
 
-        <img alt="" src={this.props.currentUser.image_url}></img>
+        <img className="dash-pic" alt="" src={this.props.currentUser.image_url}></img>
         <section className="title-block">
           <h1>{this.props.currentUser.name}s Dashboard</h1>
           {this.renderSubtitle()}
@@ -89,12 +89,38 @@ class Dashboard extends React.Component {
         <section className="body-block">
         </section>
 
-        <section className="interests">
-        </section>
+        {this.props.currentUser.interests &&
+          <div>
+            <h1 className="show-lines">Interests</h1>
+            <ul className="show-lists">
+              {Object.keys(this.props.currentUser.interests).map((interest, i) => (
+                <li key={`interest-${i}`}> {interest} </li>
+              ))}
+            </ul>
+          </div>
+        }
 
-        <section className="dealbreakers">
-        </section>
+        {this.props.currentUser.dealbreakers &&
+          <div>
+            <h1 className="show-lines">Dealbreakers</h1>
+            <ul className="show-lists">
+              {Object.keys(this.props.currentUser.dealbreakers).map((dealbreaker, i) => (
+                <li key={`dealbreaker-${i}`}> {dealbreaker} </li>
+              ))}
+            </ul>
+          </div>
+        }
 
+        {this.props.currentUser.thingsIDo &&
+          <div>
+            <h1 className="show-lines">Things I Do</h1>
+            <ul className="show-lists">
+              {Object.keys(this.props.currentUser.thingsIDo).map((thingsIDo, i) => (
+                <li key={`thingsIDo-${i}`}> {thingsIDo} </li>
+              ))}
+            </ul>
+          </div>
+        }
 
 
 

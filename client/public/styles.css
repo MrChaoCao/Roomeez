@@ -299,3 +299,23 @@ input {
   width: 400px;
   background-color: black;
 }
+
+.group-member-pics{
+  display: flex;
+  padding: 15px;
+  /* border: 1px solid black;
+  margin-left: 20px;
+  background-color: white; */
+}
+
+.group-member-pics img {
+  width: 116px;
+  height: 116px;
+  border-radius: 50%;
+  margin: 5px;
+}
+.dash-pic {
+  width: 116px;
+  height: 116px;
+  border-radius: 50%
+}
