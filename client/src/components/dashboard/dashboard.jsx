@@ -80,9 +80,9 @@ class Dashboard extends React.Component {
     // User is group admin
     if (this.props.currentUser.admin) {
       return (
-        <div className="subtitle">
-          <div>
-            <h2>My group: {currentUserGroup.name}</h2>
+        <div className="group-subtitle">
+          <div className="dash-group-header">
+            <h2 className="dash-my-group">My group: {currentUserGroup.name}</h2>
             <button onClick={this.props.deleteGroup}>Delete Group</button>
           </div>
           {this.renderGroupPics(currentUserGroup)}
@@ -92,9 +92,10 @@ class Dashboard extends React.Component {
       // User in a group but not admin
       // <button>Leave Group</button>
       return (
-        <div>
-          <div>
-            <h2>My group: {currentUserGroup.name}</h2>
+        <div className="group-subtitle">
+          <div className="dash-group-header">
+            <h2 className="dash-my-group">My group: {currentUserGroup.name}</h2>
+            <button>Leave Group</button>
           </div>
           {this.renderGroupPics(currentUserGroup)}
         </div>
@@ -113,67 +114,103 @@ class Dashboard extends React.Component {
     }
 
     return (
-      <section className="dashboard content-narrow">
+      <div className="dash-div">
         <section className="title-block">
-          <img
-            className="user-pic"
-            alt=""
-            src={this.props.currentUser.image_url}
-          ></img>
+          <div>
+            <div className="dash-header">
+              <img
+                className="dash-pic"
+                alt=""
+                src={this.props.currentUser.image_url}
+                />
+              <div className="name-and-survey">
+                <h2 className="dash-title"> {this.props.currentUser.name} Dashboard</h2>
+
+              </div>
+          </div>
+
+          </div>
+
+
           <div className="subtitle-container">
-            <h2>Dashboard</h2>
             {this.renderSubtitle()}
           </div>
         </section>
 
         <main>
-          <div>
-            <div className="body-block" id="people-looking">
+          <div className="search-blocks">
+            <div className="search-block" id="people-looking">
               <Link to="/users">
-                <i className="fas fa-user-circle"></i>
-                <h3>
-                  <span className="h3-mod">
+                <div className="icon-holder">
+                  <i id="search-icon" className="fas fa-user-circle"/>
+                </div>
+                  <p>
                     Find people looking for roommates
-                  </span>
-                </h3>
+                  </p>
               </Link>
             </div>
-            <div className="body-block" id="groups-looking">
+            <div className="search-block" id="groups-looking">
               <Link to="/groups">
-                <i className="fas fa-users"></i>
-                <h3>
-                  <span className="h3-mod">
-                    Find groups looking for roommates
-                  </span>
-                </h3>
+                <div className="icon-holder">
+                  <i id="search-icon" className="fas fa-users"/>
+                </div>
+                <p>
+                  Find groups looking for roommates
+                </p>
               </Link>
             </div>
           </div>
 
-          <div>
-            <div className="body-block" id="pending-invitations">
-              <h3>Pending Invitations</h3>
-            </div>
-            <div className="body-block" id="pending-requests">
-              <h3>Pending Requests</h3>
-            </div>
-          </div>
-
-          <div>
-            <div className="body-block" id="past-roommates">
-              <h3>Past Roommates</h3>
-
-            </div>
-          </div>
         </main>
+        {this.props.currentUser.interests &&
+          <div>
+            <h1 className="show-lines">Interests</h1>
+            <ul className="show-lists">
+              {Object.keys(this.props.currentUser.interests).map((interest, i) => (
+                <li key={`interest-${i}`}> {interest} </li>
+              ))}
+            </ul>
+          </div>
+        }
 
-        {this.renderObjectSection(
-          this.props.currentUser.interests, "Interests")}
-        {this.renderObjectSection(
-          this.props.currentUser.dealbreakers, "Dealbreakers")}
-        {this.renderObjectSection(
-          this.props.currentUser.thingsIDo, "Things I Do")}
-      </section>
+        {this.props.currentUser.dealbreakers &&
+          <div>
+            <h1 className="show-lines">Dealbreakers</h1>
+            <ul className="show-lists">
+              {Object.keys(this.props.currentUser.dealbreakers).map((dealbreaker, i) => (
+                <li key={`dealbreaker-${i}`}> {dealbreaker} </li>
+              ))}
+            </ul>
+          </div>
+        }
+
+        {this.props.currentUser.thingsIDo &&
+          <div>
+            <h1 className="show-lines">Things I Do</h1>
+            <ul className="show-lists">
+              {Object.keys(this.props.currentUser.thingsIDo).map((thingsIDo, i) => (
+                <li key={`thingsIDo-${i}`}> {thingsIDo} </li>
+              ))}
+            </ul>
+          </div>
+        }
+
+        {this.props.currentUser.about && (
+          <div>
+            <h1 className="show-lines">About:
+            </h1>
+            <p className="show-lists">
+              {this.props.currentUser.about}
+            </p>
+          </div>
+
+
+        )
+      }
+      <button className="survey-button" onClick={() => this.props.history.push('/survey')}>
+        Take the Survey!
+      </button>
+    </div>
     );
   }
 }

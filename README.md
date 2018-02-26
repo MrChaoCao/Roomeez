@@ -13,13 +13,13 @@ This app will, at a minimum, satisfy the following criteria with smooth, bug-fre
 - [x] New user sign up, sign in, and authentication
 - [x] Splash page explaining the site concept
 - [x] Dashboard page clearly displays interface options to user
-- [ ] Users fill out a survey to establish their needs and interests
-- [ ] Users can view profiles of other users
-- [ ] Users can view and create groups
-- [ ] Users can search for individuals and groups
+- [x] Users fill out a survey to establish their needs and interests
+- [x] Users can view profiles of other users
+- [x] Users can view and create groups
 
 
 #### Bonus Features
+- [ ] Users can search for individuals and groups
 - [ ] Users can rate past roommates
 - [ ] In app chat between users
 - [ ] Users/Groups can be filtered by rating
@@ -33,7 +33,7 @@ The MERN stack was chosen for this project because
 
 #### Technical Challenges
 * Learning and designing a back-end with a NoSQL database
-* Managing the complex collections required for user-user and user-group interaction 
+* Managing the complex collections required for user-user and user-group interaction
 
 ## Implementation Timeline
 ### Phase 0: Planning (1 days)

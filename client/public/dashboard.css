@@ -1,5 +1,5 @@
-.dashboard {
-  margin-top: 50px;
+.dash-div {
+  margin: 50px;
 }
 
 .dashboard button {
@@ -16,7 +16,7 @@
 
 .subtitle-container {
   display: inline-block;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 .dashboard .subtitle > div:first-child {
@@ -45,10 +45,15 @@
   margin-right: 10px;
 }
 
-.dashboard .roommate-pics {
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
+.roommate-pics {
+  width: 116px;
+  height: 116px;
+  border-radius: 50%;
+  margin: 10px;
+}
+.roommate-pics:hover {
+  box-shadow: 0px 0px 10px 5px #ff3b3f;
+  transition: 0.125s;
 }
 
 main > div {
@@ -113,4 +118,86 @@ section.interests-dbs-tid ul {
 
 section.interests-dbs-tid li {
   font-size: 2em;
+}
+
+.dash-pic {
+  width: 116px;
+  height: 116px;
+  border-radius: 50%
+}
+
+.search-blocks{
+  display: flex;
+  justify-content: space-around;
+}
+
+.search-block{
+  background-color: white;
+  border: 1px solid black;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 25px;
+}
+
+.search-block:hover{
+  box-shadow: 0px 0px 5px 5px #ff3255;
+  transition: 0.125s;
+}
+
+.icon-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.dash-my-group{
+  font-size: 34px;
+}
+
+.search-block p {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+
+#search-icon{
+  font-size: 175px;
+}
+
+.dash-header {
+  display: flex;
+  align-items: center;
+}
+.dash-title{
+  font-size: 45px;
+  margin-left: 20px;
+  border-bottom: 2px solid black;
+}
+
+.dash-group-header {
+  display: flex;
+  flex-direction: row;
+}
+
+.dash-group-header button {
+  margin-left: 20px;
+}
+
+.group-subtitle {
+  padding: 35px 0 0 25px;
+}
+
+.name-and-survey {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.survey-button {
+  display: flex;
+  margin-top: 25px;
 }
