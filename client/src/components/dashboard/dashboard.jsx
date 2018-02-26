@@ -91,11 +91,12 @@ class Dashboard extends React.Component {
     } else {
       // User in a group but not admin
       return (
-        <div className="subtitle">
-          {this.renderGroup(currentUserGroup)}
+        <div>
           <div>
+            <h2>My group: {currentUserGroup.name}</h2>
             <button>Leave Group</button>
           </div>
+          {this.renderGroupPics(currentUserGroup)}
         </div>
       );
     }
@@ -161,7 +162,7 @@ class Dashboard extends React.Component {
           <div>
             <div className="body-block" id="past-roommates">
               <h3>Past Roommates</h3>
-              
+
             </div>
           </div>
         </main>
