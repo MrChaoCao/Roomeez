@@ -32,7 +32,7 @@ router.get('', function(req, res) {
       users.forEach(user => {
         newObj[user._id] = user;
       });
-      return res.json(users);
+      return res.json(newObj);
     }
   });
 });
