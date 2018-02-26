@@ -71,16 +71,13 @@ main > div {
   display: block;
 }
 
-.body-block img {
+.body-block .fas {
   margin: 0 auto;
   margin-top: 20px;
   width: 200px;
   height: 200px;
   border-radius: 200px;
-}
-
-.body-block h3 span {
-  /* font-size:  */
+  font-size: 180px;
 }
 
 .dashboard main {
