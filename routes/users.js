@@ -1,4 +1,5 @@
 const express = require('express');
+const router = express.Router();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 // const ObjectId = require('mongodb').ObjectID;
@@ -9,9 +10,8 @@ const User = mongoose.model('User');
 
 // const UsersController = require('../controllers/users');
 
-module.exports = app => {
-
-app.get('/:userId', function(req, res) {
+// This works
+router.get('/:userId', function(req, res) {
   User.findById(req.params.userId).then(
     (user, err) => {
       if (user) {
@@ -23,7 +23,7 @@ app.get('/:userId', function(req, res) {
   );
 });
 
-app.get('', function(req, res) {
+router.get('', function(req, res) {
   User.find().exec((err, users) => {
     if (err) {
       return res.status(404).send("Not found");
@@ -37,7 +37,7 @@ app.get('', function(req, res) {
   });
 });
 
-app.patch('/:userId', function(req, res) {
+router.patch('/:userId', function(req, res) {
   User.findByIdAndUpdate(req.params.userId, {$set: req.body}).then(
     (user, err) => {
       if (user) {
@@ -48,9 +48,8 @@ app.patch('/:userId', function(req, res) {
     }
   );
 });
-};
 
-// app.get("/api/users", function(){console.log("MW");}, UsersController.get_all_based_on_match);
+// router.get("/api/users", function(){console.log("MW");}, UsersController.get_all_based_on_match);
 
 // Handle incoming GET requests to /users
 // router.get("/api/users/:userId", UsersController.get_user);
@@ -60,3 +59,5 @@ app.patch('/:userId', function(req, res) {
 // router.delete("/api/users/:userId", UsersController.delete_user);
 
 // router.post("/", checkAuth, UsersController.users_create_user);
+
+module.exports = router;
