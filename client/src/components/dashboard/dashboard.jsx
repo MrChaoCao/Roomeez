@@ -29,6 +29,38 @@ class Dashboard extends React.Component {
     );
   }
 
+  renderObjectSection(obj, objectName) {
+    let sectionTitle;
+    if (objectName !== "Things I Do") {
+      sectionTitle = "My ".concat(objectName);
+    } else {
+      sectionTitle = "About You";
+    }
+
+    let trueKeys = [];
+    Object.keys(obj).forEach((key) => {
+      if (obj[key] === "true") {
+        trueKeys.push(key);
+      }
+    });
+
+    return (
+      <section className="interests-dbs-tid">
+        <h3>{sectionTitle}</h3>
+        <button onClick={() => this.props.history.push('/survey')}>
+          Edit {sectionTitle}
+        </button>
+        <ul>
+          {
+            trueKeys.map((key) => (
+              <li key={key}>{key}</li>
+            ))
+          }
+        </ul>
+      </section>
+    );
+  }
+
   renderSubtitle() {
     let groupId = this.props.currentUser.group_id;
 
@@ -41,7 +73,7 @@ class Dashboard extends React.Component {
         </div>
       );
     }
-    
+
     let currentUserGroup = this.props.groups[groupId];
 
     // User is group admin
@@ -78,29 +110,48 @@ class Dashboard extends React.Component {
     }
 
     return (
-      <section className="dashboard">
+      <section className="dashboard content-narrow">
 
         <img alt="" src={this.props.currentUser.image_url}></img>
         <section className="title-block">
-          <h1>{this.props.currentUser.name}s Dashboard</h1>
+          <h2>{this.props.currentUser.name}s Dashboard</h2>
           {this.renderSubtitle()}
         </section>
 
-        <section className="body-block">
+        <section className="">
+          <div>
+            <div className="body-block" id="people-looking">
+              <img alt="" src="looking_for_roommates.jpg"></img>
+              <h3>Find people looking for roommates</h3>
+            </div>
+            <div className="body-block" id="groups-looking">
+              <img alt="" src="looking_for_groups.jpg"></img>
+              <h3>Find groups looking for roommates</h3>
+            </div>
+          </div>
+
+          <div>
+            <div className="body-block" id="pending-invitations">
+              <h3>Pending Invitations</h3>
+            </div>
+            <div className="body-block" id="pending-requests">
+              <h3>Pending Requests</h3>
+            </div>
+          </div>
+
+          <div>
+            <div className="body-block" id="past-roommates">
+              <h3>Past Roommates</h3>
+            </div>
+          </div>
         </section>
 
-        <section className="interests">
-        </section>
-
-        <section className="dealbreakers">
-        </section>
-
-
-
-
-
-        Dashboard
-        <a href="/survey">Take Survey</a>
+        {this.renderObjectSection(
+          this.props.currentUser.interests, "Interests")}
+        {this.renderObjectSection(
+          this.props.currentUser.dealbreakers, "Dealbreakers")}
+        {this.renderObjectSection(
+          this.props.currentUser.thingsIDo, "Things I Do")}
       </section>
     );
   }
