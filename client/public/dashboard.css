@@ -1,0 +1,119 @@
+.dashboard {
+  margin-top: 50px;
+}
+
+.dashboard button {
+}
+
+.dashboard .user-pic {
+  vertical-align: top;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin-right: 20px;
+}
+
+.subtitle-container {
+  display: inline-block;
+  margin-bottom: 60px;
+}
+
+.dashboard .subtitle > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid black;
+}
+
+.subtitle-container {
+  margin-top: 20px;
+}
+
+.subtitle > div {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.subtitle button {
+  margin: 0;
+  margin-top: 0.5em;
+}
+
+.dashboard h2 {
+  font-size: 3em;
+  margin-right: 10px;
+}
+
+.dashboard .roommate-pics {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+main > div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.body-block {
+  padding: 20px;
+  border: 1px solid black;
+  display: inline-block;
+  width: 20em;
+  min-width: 250px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#past-roommates {
+  margin: 0 auto;
+  display: block;
+}
+
+.body-block img {
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+}
+
+.body-block h3 span {
+  /* font-size:  */
+}
+
+.dashboard main {
+  margin-bottom: 50px;
+}
+
+section.interests-dbs-tid {
+  margin-bottom: 50px;
+}
+
+section.interests-dbs-tid > div {
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+}
+
+section.interests-dbs-tid h3 {
+  font-size: 3em;
+  margin: 0;
+  margin-right: 20px;
+}
+
+section.interests-dbs-tid button {
+  margin-top: 0.5em;
+}
+
+section.interests-dbs-tid ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+section.interests-dbs-tid li {
+  font-size: 2em;
+}

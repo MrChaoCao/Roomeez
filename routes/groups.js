@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const router = express.Router();
+// const router = express.Router();
 const Group = require('../models/Group');
 // const GroupsController = require('../controllers/GroupsController');
 // const User = mongoose.model('User');
@@ -8,8 +8,9 @@ const Group = require('../models/Group');
 // const checkAuth = require(‘../middleware/check-auth’);
 
 // const GroupsController = require(‘../controllers/groups’);
+module.exports = app => {
 
-router.get('/:groupId', function(req, res) {
+app.get('/api/groups/:groupId', function(req, res) {
   console.log(req.params);
   console.log(req.user);
   Group.findById(req.params.groupId, (err, group) => {
@@ -23,7 +24,7 @@ router.get('/:groupId', function(req, res) {
 });
 
 // need to get all based on match
-router.get('', function(req, res) {
+app.get('/api/groups', function(req, res) {
   Group.find().exec((err, groups) => {
     if (err) {
       return res.status(404).send("Not found");
@@ -37,7 +38,7 @@ router.get('', function(req, res) {
   });
 });
 
-router.post('', function(req, res) {
+app.post('/api/groups', function(req, res) {
   let newGroup = new Group(req.body);
   // newGroup.admin_user_id = current_user.id // need a current user helper here
   console.log("req.user !!!", req.user);
@@ -53,7 +54,7 @@ router.post('', function(req, res) {
   });
 });
 
-router.delete('/:groupId', function(req, res) {
+app.delete('/api/groups/:groupId', function(req, res) {
   Group.findByIdAndRemove(req.params.groupId, (err, group) => {
     if (err) {
       return res.send({ errors: err });
@@ -63,7 +64,7 @@ router.delete('/:groupId', function(req, res) {
   });
 });
 
-router.patch('/:groupId', function(req, res) {
+app.patch('/api/groups/:groupId', function(req, res) {
   Group.findByIdAndUpdate(req.params.groupId, { $set: req.body }, (err, group) => {
     if (err) {
       return res.send({ errors: err });
@@ -72,6 +73,7 @@ router.patch('/:groupId', function(req, res) {
     }
   });
 });
+};
 
 // router.get(“/api/groups”, function(){console.log(“MW”);}, GroupsController.get_all_based_on_match);
 
@@ -84,4 +86,4 @@ router.patch('/:groupId', function(req, res) {
 
 // router.post(“/”, checkAuth, GroupsController.groups_create_group);
 
-module.exports = router;
+// module.exports = router;
