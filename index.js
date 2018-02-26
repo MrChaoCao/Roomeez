@@ -29,6 +29,7 @@ app.use(passport.session());
 // we export a function, with which we pass in app
 require('./routes/authRoutes')(app);
 require('./routes/users')(app);
+require('./routes/groups')(app);
 //
 // app.set('view engine', 'ejs');
 // app.set('views', __dirname + '/views');
