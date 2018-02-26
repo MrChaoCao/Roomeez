@@ -130,7 +130,7 @@ class Dashboard extends React.Component {
           <div>
             <div className="body-block" id="people-looking">
               <Link to="/users">
-                <img alt="" src="looking_for_roommates.jpg"></img>
+                <i className="fas fa-user-circle"></i>
                 <h3>
                   <span className="h3-mod">
                     Find people looking for roommates
@@ -140,7 +140,7 @@ class Dashboard extends React.Component {
             </div>
             <div className="body-block" id="groups-looking">
               <Link to="/groups">
-                <img alt="" src="looking_for_groups.jpg"></img>
+                <i className="fas fa-users"></i>
                 <h3>
                   <span className="h3-mod">
                     Find groups looking for roommates
