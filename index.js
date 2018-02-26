@@ -53,7 +53,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const userRoutes = require("./routes/users");
 const searchusersRoutes = require("./routes/searchusers");
 const groupRoutes = require("./routes/groups");
-// app.use('/api/users', userRoutes);
+app.use('/api/users', userRoutes);
 app.use('/api/searchusers', searchusersRoutes);
 app.use('/api/groups', groupRoutes);
 
