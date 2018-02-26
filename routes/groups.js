@@ -8,7 +8,7 @@ const Group = require('../models/Group');
 // const checkAuth = require(‘../middleware/check-auth’);
 
 // const GroupsController = require(‘../controllers/groups’);
-module.export = app => {
+module.exports = app => {
 
 app.get('/:groupId', function(req, res) {
   console.log(req.params);
