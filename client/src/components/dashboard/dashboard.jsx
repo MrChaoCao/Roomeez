@@ -17,7 +17,7 @@ class Dashboard extends React.Component {
             <Link to={`users/${user._id}`}>
               <img
                 alt=""
-                className="roommate-pics no-more-roommates"
+                className="user-pic roommate-pics no-more-roommates"
                 key={user._id}
                 src={user.image_url}>
               </img>
@@ -90,11 +90,11 @@ class Dashboard extends React.Component {
       );
     } else {
       // User in a group but not admin
+      // <button>Leave Group</button>
       return (
         <div>
           <div>
             <h2>My group: {currentUserGroup.name}</h2>
-            <button>Leave Group</button>
           </div>
           {this.renderGroupPics(currentUserGroup)}
         </div>
@@ -130,7 +130,7 @@ class Dashboard extends React.Component {
           <div>
             <div className="body-block" id="people-looking">
               <Link to="/users">
-                <img alt="" src="looking_for_roommates.jpg"></img>
+                <i className="fas fa-user-circle"></i>
                 <h3>
                   <span className="h3-mod">
                     Find people looking for roommates
@@ -140,7 +140,7 @@ class Dashboard extends React.Component {
             </div>
             <div className="body-block" id="groups-looking">
               <Link to="/groups">
-                <img alt="" src="looking_for_groups.jpg"></img>
+                <i className="fas fa-users"></i>
                 <h3>
                   <span className="h3-mod">
                     Find groups looking for roommates
