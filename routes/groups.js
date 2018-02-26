@@ -10,7 +10,7 @@ const Group = require('../models/Group');
 // const GroupsController = require(‘../controllers/groups’);
 module.exports = app => {
 
-app.get('/:groupId', function(req, res) {
+app.get('/api/groups/:groupId', function(req, res) {
   console.log(req.params);
   console.log(req.user);
   Group.findById(req.params.groupId, (err, group) => {
@@ -24,7 +24,7 @@ app.get('/:groupId', function(req, res) {
 });
 
 // need to get all based on match
-app.get('', function(req, res) {
+app.get('/api/groups', function(req, res) {
   Group.find().exec((err, groups) => {
     if (err) {
       return res.status(404).send("Not found");
@@ -38,7 +38,7 @@ app.get('', function(req, res) {
   });
 });
 
-app.post('', function(req, res) {
+app.post('/api/groups', function(req, res) {
   let newGroup = new Group(req.body);
   // newGroup.admin_user_id = current_user.id // need a current user helper here
   console.log("req.user !!!", req.user);
@@ -54,7 +54,7 @@ app.post('', function(req, res) {
   });
 });
 
-app.delete('/:groupId', function(req, res) {
+app.delete('/api/groups/:groupId', function(req, res) {
   Group.findByIdAndRemove(req.params.groupId, (err, group) => {
     if (err) {
       return res.send({ errors: err });
@@ -64,7 +64,7 @@ app.delete('/:groupId', function(req, res) {
   });
 });
 
-app.patch('/:groupId', function(req, res) {
+app.patch('/api/groups/:groupId', function(req, res) {
   Group.findByIdAndUpdate(req.params.groupId, { $set: req.body }, (err, group) => {
     if (err) {
       return res.send({ errors: err });

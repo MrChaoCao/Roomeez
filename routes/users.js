@@ -13,7 +13,7 @@ const User = mongoose.model('User');
 module.exports = app => {
 
 // This works
-app.get('/:userId', function(req, res) {
+app.get('/api/users/:userId', function(req, res) {
   User.findById(req.params.userId).then(
     (user, err) => {
       if (user) {
@@ -25,7 +25,7 @@ app.get('/:userId', function(req, res) {
   );
 });
 
-app.get('', function(req, res) {
+app.get('/api/users', function(req, res) {
   User.find().exec((err, users) => {
     if (err) {
       return res.status(404).send("Not found");
@@ -39,7 +39,7 @@ app.get('', function(req, res) {
   });
 });
 
-app.patch('/:userId', function(req, res) {
+app.patch('/api/users/:userId', function(req, res) {
   User.findByIdAndUpdate(req.params.userId, {$set: req.body}).then(
     (user, err) => {
       if (user) {
