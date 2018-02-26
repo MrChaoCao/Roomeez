@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
 import { fetchUsers, fetchUser } from './util/users_api_util';
+import { createGroup } from './util/groups_api_util';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.store = store;
   window.fetchUsers = fetchUsers;
   window.fetchUser = fetchUser;
+  window.createGroup = createGroup;
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
 });

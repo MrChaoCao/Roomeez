@@ -28,10 +28,14 @@ app.use(passport.session());
 
 // we export a function, with which we pass in app
 require('./routes/authRoutes')(app);
+require('./routes/users')(app);
+require('./routes/groups')(app);
 //
 // app.set('view engine', 'ejs');
 // app.set('views', __dirname + '/views');
 
+
+// something here!!!!??????
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
 
@@ -48,12 +52,12 @@ if (process.env.NODE_ENV === 'production') {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const userRoutes = require("./routes/users");
-const searchusersRoutes = require("./routes/searchusers");
-const groupRoutes = require("./routes/groups");
-app.use('/api/users', userRoutes);
-app.use('/api/searchusers', searchusersRoutes);
-app.use('/api/groups', groupRoutes);
+// const userRoutes = require("./routes/users");
+// const searchusersRoutes = require("./routes/searchusers");
+// const groupRoutes = require("./routes/groups");
+// app.use('/api/users', userRoutes);
+// app.use('/api/searchusers', searchusersRoutes);
+// app.use('/api/groups', groupRoutes);
 
 
 // use below to store the session in some server separate from the cookie

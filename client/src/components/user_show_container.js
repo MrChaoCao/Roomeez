@@ -4,9 +4,10 @@ import { withRouter } from 'react-router-dom';
 import UserShow from './user_show';
 
 const mapStateToProps = (state, ownProps) => {
+  let userId = ownProps.match.params.userId;
   return {
     userId: ownProps.match.params.userId,
-    user: state.entities.users.shownUser,
+    user: state.entities.users[userId]
   };
 };
 
