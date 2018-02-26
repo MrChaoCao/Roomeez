@@ -70,8 +70,9 @@ class UserSurvey extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit} className="user-survey">
-        <h1>Tell Us What You Want, What you Really, Really Want...</h1>
+      <div className="user-survey-page">
+        <form onSubmit={this.handleSubmit} className="user-survey">
+          <h1>Tell Us What You Want, What you Really, Really Want...</h1>
           <h2>What You're Into</h2>
           <label>Sports
             <input type="checkbox" value="sports" checked={this.state.sports} onChange={this.handleOptionChange} />
@@ -123,6 +124,7 @@ class UserSurvey extends React.Component {
           <br/>
           <button>Submit</button>
         </form>
+      </div>
     );
   }
 }
