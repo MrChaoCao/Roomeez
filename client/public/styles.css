@@ -294,6 +294,10 @@ input {
   color: #efefef;
 }
 
+.user_show_container button {
+  margin-top: 30px;
+}
+
 
 .name-line{
   height: 1.5px;
