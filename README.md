@@ -1,3 +1,5 @@
+http://roommez.herokuapp.com/
+
 # Roomeez
 Roomeez is a web application designed to help users find roommates.
 
