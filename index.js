@@ -32,12 +32,14 @@ require('./routes/authRoutes')(app);
 // app.set('view engine', 'ejs');
 // app.set('views', __dirname + '/views');
 
+
+// something here!!!!??????
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
 
   const path = require('path');
   app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.js'));
   });
 }
 
