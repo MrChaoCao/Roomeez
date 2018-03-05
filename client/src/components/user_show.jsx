@@ -5,6 +5,20 @@ class UserShow extends React.Component {
     this.props.fetchUser(this.props.userId);
   }
 
+  renderListItems(list) {
+    return (
+      Object.keys(list).map((item, i) => {
+        return (
+          Object.values(list)[i] !== "false" && Object.values(list)[i] ? (
+            <li key={`interest-${this.props.user._id}-${i}`}> {item} </li>
+          ) : (
+            null
+          )
+        );
+      })
+    );
+  }
+
   render () {
     let user = this.props.user;
     if (user){
@@ -12,7 +26,7 @@ class UserShow extends React.Component {
       if (user.group_id) {
         button = <button onClick={
             () => this.props.history.push(`/groups/${user.group_id}`)
-          }>View Your Group</button>;
+          }>View Group</button>;
         }
       return (
         <div className="user_show_container">
@@ -30,9 +44,7 @@ class UserShow extends React.Component {
             <div>
               <h1 className="show-lines">Interests</h1>
               <ul className="show-lists">
-                {Object.keys(user.interests).map((interest, i) => (
-                  <li key={`interest-${i}`}> {interest} </li>
-                ))}
+                {this.renderListItems(user.interests)}
               </ul>
             </div>
           }
@@ -41,9 +53,7 @@ class UserShow extends React.Component {
             <div>
               <h1 className="show-lines">Dealbreakers</h1>
               <ul className="show-lists">
-                {Object.keys(user.dealbreakers).map((dealbreaker, i) => (
-                  <li key={`dealbreaker-${i}`}> {dealbreaker} </li>
-                ))}
+                {this.renderListItems(user.dealbreakers)}
               </ul>
             </div>
           }
@@ -52,9 +62,7 @@ class UserShow extends React.Component {
             <div>
               <h1 className="show-lines">Things I Do</h1>
               <ul className="show-lists">
-                {Object.keys(user.thingsIDo).map((thingsIDo, i) => (
-                  <li key={`thingsIDo-${i}`}> {thingsIDo} </li>
-                ))}
+                {this.renderListItems(user.thingsIDo)}
               </ul>
             </div>
           }

@@ -107,7 +107,7 @@ class Dashboard extends React.Component {
     return (
       Object.keys(list).map((item, i) => {
         return (
-          Object.values(list)[i] === 'true' ? (
+          Object.values(list)[i] !== "false" && Object.values(list)[i] ? (
             <li key={`interest-${this.props.currentUser._id}-${i}`}> {item} </li>
           ) : (
             null
