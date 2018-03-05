@@ -23,6 +23,8 @@ app.use(
 // tells passport to make use of cookies to handle auth
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(bodyParser.json()); // must be above routes
+app.use(bodyParser.urlencoded({ extended: true })); // must be above routes
 
 // we export a function, with which we pass in app
 require('./routes/authRoutes')(app);
@@ -47,8 +49,6 @@ if (process.env.NODE_ENV === 'production') {
 // app.use('view engine', 'pug')
 // view engine
 // app.use(express.static(__dirname + '/views'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 
 // const userRoutes = require("./routes/users");
 // const searchusersRoutes = require("./routes/searchusers");

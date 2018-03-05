@@ -14,11 +14,11 @@ class Dashboard extends React.Component {
       <div className="group-member-pics">
         {
           groupMembers.map((user) => (
-            <Link to={`users/${user._id}`}>
+            <Link to={`users/${user._id}`}
+              key={`${user._id}`}>
               <img
                 alt=""
                 className="user-pic roommate-pics no-more-roommates"
-                key={user._id}
                 src={user.image_url}>
               </img>
             </Link>
@@ -103,16 +103,30 @@ class Dashboard extends React.Component {
     }
   }
 
+  renderListItems(list, category) {
+    return (
+      Object.keys(list).map((item, i) => {
+        return (
+          Object.values(list)[i] !== "false" && Object.values(list)[i] ? (
+            <li key={`${category}-${this.props.currentUser._id}-${i}`}> {item} </li>
+          ) : (
+            null
+          )
+        );
+      })
+    );
+  }
+
   render() {
+    let currentUser = this.props.currentUser;
     if (Object.keys(this.props.users).length === 0 ||
         Object.keys(this.props.groups).length === 0 ||
-        this.props.currentUser === null ||
-        this.props.currentUser === false
+        currentUser === null ||
+        currentUser === false
        )
     {
       return null;
     }
-
     return (
       <div className="dash-div">
         <section className="title-block">
@@ -121,10 +135,10 @@ class Dashboard extends React.Component {
               <img
                 className="dash-pic"
                 alt=""
-                src={this.props.currentUser.image_url}
+                src={currentUser.image_url}
                 />
               <div className="name-and-survey">
-                <h2 className="dash-title"> {this.props.currentUser.name} Dashboard</h2>
+                <h2 className="dash-title"> {currentUser.name} Dashboard</h2>
 
               </div>
           </div>
@@ -162,45 +176,39 @@ class Dashboard extends React.Component {
           </div>
 
         </main>
-        {this.props.currentUser.interests &&
+        {currentUser.interests &&
           <div>
             <h1 className="show-lines">Interests</h1>
             <ul className="show-lists">
-              {Object.keys(this.props.currentUser.interests).map((interest, i) => (
-                <li key={`interest-${i}`}> {interest} </li>
-              ))}
+              {this.renderListItems(currentUser.interests, 'interests')}
             </ul>
           </div>
         }
 
-        {this.props.currentUser.dealbreakers &&
+        {currentUser.dealbreakers &&
           <div>
             <h1 className="show-lines">Dealbreakers</h1>
             <ul className="show-lists">
-              {Object.keys(this.props.currentUser.dealbreakers).map((dealbreaker, i) => (
-                <li key={`dealbreaker-${i}`}> {dealbreaker} </li>
-              ))}
+              {this.renderListItems(currentUser.dealbreakers, 'dealbreakers')}
             </ul>
           </div>
         }
 
-        {this.props.currentUser.thingsIDo &&
+        {currentUser.thingsIDo &&
           <div>
             <h1 className="show-lines">Things I Do</h1>
-            <ul className="show-lists">
-              {Object.keys(this.props.currentUser.thingsIDo).map((thingsIDo, i) => (
-                <li key={`thingsIDo-${i}`}> {thingsIDo} </li>
-              ))}
+              <ul className="show-lists">
+              {this.renderListItems(currentUser.thingsIDo, 'thingsIDo')}
             </ul>
           </div>
         }
 
-        {this.props.currentUser.about && (
+        {currentUser.about && (
           <div>
             <h1 className="show-lines">About:
             </h1>
             <p className="show-lists">
-              {this.props.currentUser.about}
+              {currentUser.about}
             </p>
           </div>
 
