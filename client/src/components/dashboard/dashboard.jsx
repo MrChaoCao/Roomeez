@@ -13,7 +13,7 @@ class Dashboard extends React.Component {
     return (
       <div className="group-member-pics">
         {
-          groupMembers.map((user, i) => (
+          groupMembers.map((user) => (
             <Link to={`users/${user._id}`}
               key={`${user._id}`}>
               <img
