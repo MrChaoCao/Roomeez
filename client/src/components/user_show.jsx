@@ -5,12 +5,12 @@ class UserShow extends React.Component {
     this.props.fetchUser(this.props.userId);
   }
 
-  renderListItems(list) {
+  renderListItems(list, category) {
     return (
       Object.keys(list).map((item, i) => {
         return (
           Object.values(list)[i] !== "false" && Object.values(list)[i] ? (
-            <li key={`interest-${this.props.user._id}-${i}`}> {item} </li>
+            <li key={`${category}-${this.props.user._id}-${i}`}> {item} </li>
           ) : (
             null
           )
@@ -44,7 +44,7 @@ class UserShow extends React.Component {
             <div>
               <h1 className="show-lines">Interests</h1>
               <ul className="show-lists">
-                {this.renderListItems(user.interests)}
+                {this.renderListItems(user.interests, 'interests')}
               </ul>
             </div>
           }
@@ -53,7 +53,7 @@ class UserShow extends React.Component {
             <div>
               <h1 className="show-lines">Dealbreakers</h1>
               <ul className="show-lists">
-                {this.renderListItems(user.dealbreakers)}
+                {this.renderListItems(user.dealbreakers, 'dealbreakers')}
               </ul>
             </div>
           }
@@ -62,7 +62,7 @@ class UserShow extends React.Component {
             <div>
               <h1 className="show-lines">Things I Do</h1>
               <ul className="show-lists">
-                {this.renderListItems(user.thingsIDo)}
+                {this.renderListItems(user.thingsIDo, 'thingsIDo')}
               </ul>
             </div>
           }

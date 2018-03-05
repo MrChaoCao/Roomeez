@@ -103,12 +103,12 @@ class Dashboard extends React.Component {
     }
   }
 
-  renderListItems(list) {
+  renderListItems(list, category) {
     return (
       Object.keys(list).map((item, i) => {
         return (
           Object.values(list)[i] !== "false" && Object.values(list)[i] ? (
-            <li key={`interest-${this.props.currentUser._id}-${i}`}> {item} </li>
+            <li key={`${category}-${this.props.currentUser._id}-${i}`}> {item} </li>
           ) : (
             null
           )
@@ -180,7 +180,7 @@ class Dashboard extends React.Component {
           <div>
             <h1 className="show-lines">Interests</h1>
             <ul className="show-lists">
-              {this.renderListItems(currentUser.interests)}
+              {this.renderListItems(currentUser.interests, 'interests')}
             </ul>
           </div>
         }
@@ -189,7 +189,7 @@ class Dashboard extends React.Component {
           <div>
             <h1 className="show-lines">Dealbreakers</h1>
             <ul className="show-lists">
-              {this.renderListItems(currentUser.dealbreakers)}
+              {this.renderListItems(currentUser.dealbreakers, 'dealbreakers')}
             </ul>
           </div>
         }
@@ -198,7 +198,7 @@ class Dashboard extends React.Component {
           <div>
             <h1 className="show-lines">Things I Do</h1>
               <ul className="show-lists">
-              {this.renderListItems(currentUser.thingsIDo)}
+              {this.renderListItems(currentUser.thingsIDo, 'thingsIDo')}
             </ul>
           </div>
         }
