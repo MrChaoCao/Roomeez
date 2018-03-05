@@ -15,7 +15,7 @@ class Dashboard extends React.Component {
         {
           groupMembers.map((user, i) => (
             <Link to={`users/${user._id}`}
-              key={`${user._id}${Math.random() * 200000}`}>
+              key={`${user._id}`}>
               <img
                 alt=""
                 className="user-pic roommate-pics no-more-roommates"
