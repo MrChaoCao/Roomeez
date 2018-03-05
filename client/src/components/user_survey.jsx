@@ -63,7 +63,7 @@ class UserSurvey extends React.Component {
           pets: newState.pets,
           smoking: newState.smoking
         },
-        id: this.props.currentUser._id
+        _id: this.props.currentUser._id
       };
       this.props.updateUser(newObj).then(() => this.props.history.push('/dashboard'));
   }
